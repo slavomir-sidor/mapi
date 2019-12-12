@@ -366,10 +366,8 @@
 
 		<defaults
 			autowire="true"
-			autoconfigure="true"
+			autoconfigure="false"
 			public="false">
-
-			<bind key="$projectDir">%kernel.project_dir%</bind>
 
 		</defaults>
 

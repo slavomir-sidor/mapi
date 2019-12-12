@@ -9,11 +9,12 @@
  */
 namespace SK\ITCBundle\Command;
 
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\HttpKernel\Log\Logger;
 use SK\ITCBundle\Service\Table\Table;
 use Symfony\Component\Console\Input\InputOption;
 use SK\ITCBundle\Service\Table\Adapter\TXT;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 
 abstract class TableCommand extends AbstractCommand
 {
@@ -58,9 +59,34 @@ abstract class TableCommand extends AbstractCommand
 	{
 		parent::configure();
 
-		$this->addOption( "format", "f", InputOption::VALUE_OPTIONAL, "Output format (" . implode( ", ", Table::getOutputFormat() ) . ")", TXT::name );
-		$this->addOption( "outputFileName", "ofn", InputOption::VALUE_REQUIRED, "Output File name." );
-		$this->addOption( "maxColWidth", "cw", InputOption::VALUE_OPTIONAL, "Maximum character width per table col" );
+		$this->addOption( "format", "f", InputOption::VALUE_OPTIONAL,
+			"Output format (" . implode( ", ", Table::getOutputFormat() ) . ")", TXT::name );
+		$this->addOption( "outputFileName", "ofn", InputOption::VALUE_REQUIRED,
+			"Output File name." );
+		$this->addOption( "maxColWidth", "cw", InputOption::VALUE_OPTIONAL,
+			"Maximum character width per table col" );
+	}
+
+	/**
+	 *
+	 * {@inheritdoc}
+	 * @see \SK\ITCBundle\Command\AbstractCommand::execute()
+	 */
+	public function execute( InputInterface $input, OutputInterface $output )
+	{
+		try
+		{
+			parent::execute( $input, $output );
+
+			$this->writeTable( 120 );
+
+			return 0;
+		}
+		catch( \Exception $e )
+		{
+			$this->getOutput()->write( $e->getMessage() );
+			return 1;
+		}
 	}
 
 	/**
@@ -77,13 +103,14 @@ abstract class TableCommand extends AbstractCommand
 		}
 
 		$table = $this->getTable();
-		
+
 		ob_start();
 		$table->write( $format, $this->getOutput() );
 		$content = ob_get_contents();
 		ob_clean();
 
-		if( $this->getInput()->hasOption( 'outputFileName' ) && ( $outputFileName = $this->getInput()->getOption( 'outputFileName' ) ) !== null )
+		if( $this->getInput()->hasOption( 'outputFileName' ) &&
+			( $outputFileName = $this->getInput()->getOption( 'outputFileName' ) ) !== null )
 		{
 			file_put_contents( $outputFileName, $content );
 		}
@@ -124,7 +151,6 @@ abstract class TableCommand extends AbstractCommand
 	{
 		$this->table->setColumns( $this->getColumns() );
 		$this->table->setRows( $this->getRows() );
-		print_r($this->getRows());exit;
 		$this->table->setTitle( $this->getName() );
 		$this->table->setDescription( $this->getDescription() );
 

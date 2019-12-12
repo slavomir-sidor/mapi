@@ -11,7 +11,6 @@ namespace SK\ITCBundle\Command;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\HttpKernel\Log\Logger;
 use SK\ITCBundle\Service\Table\Adapter\TXT;
 use SK\ITCBundle\Service\Table\Adapter\SpreedSheet;
@@ -127,12 +126,20 @@ abstract class AbstractCommand extends Command
 	 * Writes SK ITCBundle Abstract Command Line
 	 *
 	 * @param string $message
-	 *        	SK ITCBundle Abstract Command Info Line
-	 * @return \SK\ITCBundle\Command\AbstractCommand SK ITCBundle Abstract Command
+	 * @param int $verbosity
+	 * @param OutputInterface $output
+	 * @return \SK\ITCBundle\Command\AbstractCommand
 	 */
-	public function writeLine( $message = "\n", $verbosity = OutputInterface::VERBOSITY_NORMAL )
+	public function writeLine( $message = "\n",
+		$verbosity = OutputInterface::VERBOSITY_NORMAL, OutputInterface $output = null )
 	{
-		$this->getOutput()->writeln( $message, $verbosity );
+		if( $output === null )
+		{
+			$output = $this->getOutput();
+		}
+
+		$output->writeln( $message, $verbosity );
+
 		return $this;
 	}
 
@@ -141,12 +148,19 @@ abstract class AbstractCommand extends Command
 	 *
 	 * @param string $message
 	 *        	SK ITCBundle Abstract Command Info Message
+	 * @param OutputInterface $output
 	 * @return \SK\ITCBundle\Command\AbstractCommand SK ITCBundle Abstract Command
 	 */
-	public function writeInfo( $message, $verbosity = OutputInterface::VERBOSITY_VERBOSE )
+	public function writeInfo( $message, $verbosity = OutputInterface::VERBOSITY_VERBOSE,
+		OutputInterface $output = null )
 	{
-		$output = $this->getOutput();
+		if( $output === null )
+		{
+			$output = $this->getOutput();
+		}
+
 		$output->writeln( sprintf( '<fg=white>%s</fg=white>', $message ), $verbosity );
+
 		return $this;
 	}
 
@@ -155,12 +169,18 @@ abstract class AbstractCommand extends Command
 	 *
 	 * @param string $message
 	 *        	SK ITCBundle Abstract Command Header Message
+	 * @param OutputInterface $output
 	 * @return \SK\ITCBundle\Command\AbstractCommand SK ITCBundle Abstract Command
 	 */
-	public function writeHeader( $message )
+	public function writeHeader( $message, OutputInterface $output = null )
 	{
-		$output = $this->getOutput();
+		if( $output === null )
+		{
+			$output = $this->getOutput();
+		}
+
 		$output->writeln( ' <fg=white;bg=magenta>' . $message . "</fg=white;bg=magenta>" );
+
 		return $this;
 	}
 
@@ -169,11 +189,19 @@ abstract class AbstractCommand extends Command
 	 *
 	 * @param string $message
 	 *        	SK ITCBundle Abstract Command Notice Message
+	 * @param OutputInterface $output
 	 * @return \SK\ITCBundle\Command\AbstractCommand SK ITCBundle Abstract Command
 	 */
-	public function writeNotice( $message, $verbosity = OutputInterface::VERBOSITY_NORMAL )
+	public function writeNotice( $message, $verbosity = OutputInterface::VERBOSITY_NORMAL,
+		OutputInterface $output = null )
 	{
-		$this->getOutput()->writeln( "<fg=blue>{$message}</fg=blue>", $verbosity );
+		if( $output === null )
+		{
+			$output = $this->getOutput();
+		}
+
+		$output->writeln( "<fg=blue>{$message}</fg=blue>", $verbosity );
+
 		return $this;
 	}
 
@@ -182,17 +210,28 @@ abstract class AbstractCommand extends Command
 	 *
 	 * @param string $message
 	 *        	SK ITCBundle Abstract Command Debug Message
+	 * @param InputInterface $input
+	 * @param OutputInterface $output
 	 * @return \SK\ITCBundle\Command\AbstractCommand SK ITCBundle Abstract Command
 	 */
-	public function writeDebug( $message )
+	public function writeDebug( $message, InputInterface $input = null,
+		OutputInterface $output = null )
 	{
-		$input = $this->getInput();
-		$output = $this->getOutput();
+		if( $output === null )
+		{
+			$output = $this->getOutput();
+		}
+
+		if( $input === null )
+		{
+			$input = $this->getInput();
+		}
 
 		if( self::OPTION_VERBOSE_OUTPUT_YES == $input->getOption( "verbose" ) )
 		{
 			$output->writeln( ' <fg=blue;bg=white>DEBUG:</fg=blue;bg=white> ' . $message );
 		}
+
 		return $this;
 	}
 
@@ -216,5 +255,6 @@ abstract class AbstractCommand extends Command
 	public function setLogger( Logger $logger )
 	{
 		$this->logger = $logger;
+		return $this;
 	}
 }

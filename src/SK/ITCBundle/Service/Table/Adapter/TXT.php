@@ -26,9 +26,8 @@ class TXT implements IAdapter
 	public function write( Table $table, OutputInterface $output )
 	{
 		$style = new TableStyle();
-		$style->setHorizontalBorderChar( '<fg=magenta>-</>' )
-			->setVerticalBorderChar( '<fg=magenta>|</>' )
-			->setCrossingChar( '<fg=magenta>+</>' );
+		$style->setHorizontalBorderChars( '<fg=magenta>-</>' )
+			->setVerticalBorderChars( '<fg=magenta>|</>' );
 
 		$stable = new STable( $output );
 		$stable->setStyle( 'default' );

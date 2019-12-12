@@ -3,7 +3,6 @@ namespace SK\ITCBundle\Service\Code;
 
 use TokenReflection\Broker;
 use Symfony\Component\Finder\Finder;
-use TokenReflection\Broker\Backend;
 use TokenReflection\ReflectionFile;
 use TokenReflection\ReflectionNamespace;
 use TokenReflection\Php\ReflectionClass;
@@ -106,7 +105,7 @@ class Reflection extends AbstractService
 		if( null === $this->classes )
 		{
 			$classes = new ClassCollection();
-
+			
 			/* @var $file ReflectionFile*/
 			foreach( $this->getFiles() as $file )
 			{
@@ -430,7 +429,8 @@ class Reflection extends AbstractService
 				}
 				catch( \Exception $exception )
 				{
-					$this->getLogger()->log( Logger::NOTICE, $exception->getMessage() );
+					
+					$this->getLogger()->notice( $exception->getMessage() );
 				}
 			}
 

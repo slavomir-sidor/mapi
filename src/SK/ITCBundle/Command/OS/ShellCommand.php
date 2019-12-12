@@ -33,7 +33,8 @@ class ShellCommand extends TableCommand
 	 * @param Logger $logger
 	 * @param Command $commad
 	 */
-	public function __construct( $name, $description, Logger $logger, Table $table, Command $command )
+	public function __construct( $name, $description, Logger $logger, Table $table,
+		Command $command )
 	{
 		parent::__construct( $name, $description, $logger, $table );
 
@@ -41,37 +42,25 @@ class ShellCommand extends TableCommand
 	}
 
 	/**
-	 * (non-PHPdoc)
 	 *
-	 * @see \SK\ITCBundle\Code\Generator\PHPUnit\AbstractGenerator::execute($input, $output)
-	 */
-	public function execute( InputInterface $input, OutputInterface $output )
-	{
-		parent::execute( $input, $output );
-
-		$this->writeTable( 120 );
-	}
-
-	/**
-	 *
-	 * {@inheritDoc}
+	 * {@inheritdoc}
 	 *
 	 * @see \SK\ITCBundle\Command\TableCommand::getColumns()
 	 */
 	protected function getColumns()
 	{
-		$prefix=$this->getCommand()->getPrefix();
-		$arguments=$this->getCommand()->getArguments();
+		$prefix = $this->getCommand()->getPrefix();
+		$arguments = $this->getCommand()->getArguments();
 
 		return array(
-			'command' =>  ' ' . (is_array($arguments)?
-				implode( ' ', $arguments ):$arguments)
+			'command' => $prefix . " " .
+			( is_array( $arguments ) ? implode( ' ', $arguments ) : $arguments )
 		);
 	}
 
 	/**
 	 *
-	 * {@inheritDoc}
+	 * {@inheritdoc}
 	 *
 	 * @see \SK\ITCBundle\Command\TableCommand::getRows()
 	 */
@@ -83,10 +72,8 @@ class ShellCommand extends TableCommand
 
 			$process = $this->getCommand()->getProcess();
 
-			$rows = [
-				[
-					'command' => $process->getOutput()
-				]
+			$rows = [['command' => $process->getOutput()
+			]
 			];
 			$this->setRows( $rows );
 		}

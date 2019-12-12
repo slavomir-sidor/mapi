@@ -9,6 +9,7 @@
         "ext-iconv": "*",
         "andrewsville/php-token-reflection": "^1.4",
         "monolog/monolog": "^2.0",
+        "phpcollection/phpcollection": "^0.5.0",
         "sensiolabs/ansi-to-html": "^1.1",
         "symfony/console": "5.0.*",
         "symfony/dotenv": "5.0.*",

@@ -1047,27 +1047,7 @@
 			id="sk.itcbundle.code.generator.wsdl.security"
 			class="%sk.itcbundle.code.generator.wsdl.security.class%" />
 
-		<!-- OS -->
-		<service
-			id="sk.itcbundle.os.command.uname"
-			class="%sk.itcbundle.os.command.class%">
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="sk.itcbundle.table" />
-
-			<argument type="string">uname</argument>
-
-			<argument type="collection">
-				<argument>-a</argument>
-			</argument>
-
-		</service>
-
+		<!-- OS Command -->
 		<service
 			id="sk.itcbundle.os.command.lsb_release"
 			class="%sk.itcbundle.os.command.class%">
@@ -1075,10 +1055,6 @@
 			<argument
 				type="service"
 				id="logger" />
-
-			<argument
-				type="service"
-				id="sk.itcbundle.table" />
 
 			<argument type="string">lsb_release</argument>
 
@@ -1089,16 +1065,12 @@
 		</service>
 
 		<service
-			id="sk.itcbundle.os.command"
+			id="sk.itcbundle.os.command.uname"
 			class="%sk.itcbundle.os.command.class%">
 
 			<argument
 				type="service"
 				id="logger" />
-
-			<argument
-				type="service"
-				id="sk.itcbundle.table" />
 
 			<argument type="string">uname</argument>
 
@@ -1108,6 +1080,30 @@
 
 		</service>
 
+		<!-- OS Shell Command -->
+		<service
+			id="sk.itcbundle.command.os.name"
+			class="%sk.itcbundle.command.os.shellcommand.class%">
+
+			<argument type="string">%sk.itcbundle.command.os.name.name%</argument>
+			<argument type="string">%sk.itcbundle.command.os.name.description%</argument>
+
+			<argument
+				type="service"
+				id="logger" />
+
+			<argument
+				type="service"
+				id="sk.itcbundle.table" />
+
+			<argument
+				type="service"
+				id="sk.itcbundle.os.command.uname" />
+
+			<tag name="console.command" />
+
+		</service>
+		
 		<service
 			id="sk.itcbundle.command.os.release"
 			class="%sk.itcbundle.command.os.shellcommand.class%">
@@ -1131,28 +1127,6 @@
 
 		</service>
 
-		<service
-			id="sk.itcbundle.command.os.name"
-			class="%sk.itcbundle.command.os.shellcommand.class%">
-
-			<argument type="string">%sk.itcbundle.command.os.name.name%</argument>
-			<argument type="string">%sk.itcbundle.command.os.name.description%</argument>
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="sk.itcbundle.table" />
-
-			<argument
-				type="service"
-				id="sk.itcbundle.os.command.uname" />
-
-			<tag name="console.command" />
-
-		</service>
 
 		<!-- <service -->
 		<!-- id="sk.itcbundle.command.code.generator.phpunit.functional" -->

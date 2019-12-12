@@ -26,35 +26,35 @@ class SchemaController extends ApplicationController
 	 */
 	protected $cliApplication;
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:Schema:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:Schema:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:Schema:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function namespaceAction()
+	public function namespace()
 	{
 
 		return $this->render( 'SKITCBundle:Schema:namespace.html.twig', $this->getModel() );
 	
 	}
 
-	public function interchangeAction()
+	public function interchange()
 	{
 
 		$model = $this->getModel();
@@ -74,7 +74,7 @@ class SchemaController extends ApplicationController
 	
 	}
 
-	public function documentationAction()
+	public function documentation()
 	{
 
 		$request = $this->getRequest();
@@ -107,18 +107,18 @@ class SchemaController extends ApplicationController
 	}
 
 	/**
-	 * SK ITC Bundle Schema Controller Gateway Action
+	 * SK ITC Bundle Schema Controller Gateway 
 	 *
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
-	public function gatewayAction()
+	public function gateway()
 	{
 
 		return $this->render( 'SKITCBundle:Schema:Gateway/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function explorerAction()
+	public function explorer()
 	{
 
 		$model = $this->getModel();

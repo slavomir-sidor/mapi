@@ -3,7 +3,7 @@ namespace SK\ITCBundle\Service\OS;
 
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use SK\ITCBundle\Service\AbstractService;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Process\Process;
 
 class Command extends AbstractService
@@ -30,7 +30,7 @@ class Command extends AbstractService
 
 	/**
 	 */
-	public function __construct( Logger $logger, $prefix, $arguments )
+	public function __construct( LoggerInterface $logger, $prefix, $arguments )
 	{
 		parent::__construct( $logger );
 

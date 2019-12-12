@@ -1,0 +1,34 @@
+<!-- config/packages/prod/monolog.xml -->
+<container
+	xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:monolog="http://symfony.com/schema/dic/monolog"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd
+        http://symfony.com/schema/dic/monolog
+        https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+
+	<monolog:config>
+	
+	<!-- 
+		<monolog:handler
+			name="security"
+			type="stream"
+			path="%kernel.logs_dir%/security.log">
+
+		</monolog:handler>
+ -->
+		<monolog:handler
+			name="system"
+			type="stream"
+			path="%kernel.logs_dir%/system.log">
+			<!-- monolog.logger.XXX
+			 <monolog:channels>
+                <monolog:channel>doctrine</monolog:channel>
+            </monolog:channels>
+			 -->
+		</monolog:handler>
+		
+	</monolog:config>
+
+</container>

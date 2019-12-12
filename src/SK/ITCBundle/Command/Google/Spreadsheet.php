@@ -12,13 +12,13 @@ namespace SK\ITCBundle\Command\Google;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use SK\ITCBundle\Command\AbstractCommand;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use SK\ITCBundle\Service\Table\Table;
 
 class Spreadsheet extends AbstractCommand
 {
 
-	public function __construct( $name, $description, Logger $logger, Table $table )
+	public function __construct( $name, $description, LoggerInterface $logger, Table $table )
 	{
 		parent::__construct( $name, $description, $logger, $table );
 	}

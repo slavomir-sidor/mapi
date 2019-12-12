@@ -27,91 +27,91 @@ use Zend\Soap\AutoDiscover;
 class ApplicationController extends FilesystemController
 {
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:Application:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:Application:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:Application:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function containerAction()
+	public function container()
 	{
 
 		return $this->render( 'SKITCBundle:Application:Container/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function createAction()
+	public function create()
 	{
 
 		return $this->render( 'SKITCBundle:Application:create.html.twig', $this->getModel() );
 	
 	}
 
-	public function editAction()
+	public function edit()
 	{
 
 		return $this->render( 'SKITCBundle:Application:edit.html.twig', $this->getModel() );
 	
 	}
 
-	public function viewAction()
+	public function view()
 	{
 
 		return $this->render( 'SKITCBundle:Application:edit.html.twig', $this->getModel() );
 	
 	}
 
-	public function filesystemAction()
+	public function filesystem()
 	{
 
 		return $this->render( 'SKITCBundle:Application:Filesystem/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function bundleAction()
+	public function bundle()
 	{
 
 		return $this->render( 'SKITCBundle:Application:Bundle/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function serviceAction()
+	public function service()
 	{
 
 		return $this->render( 'SKITCBundle:Application:service.html.twig', $this->getModel() );
 	
 	}
 
-	public function modelAction()
+	public function model()
 	{
 
 		return $this->render( 'SKITCBundle:Application:namespace.html.twig', $this->getModel() );
 	
 	}
 
-	public function namespaceAction()
+	public function namespace()
 	{
 
 		return $this->render( 'SKITCBundle:Application:Namespace/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function configurationAction()
+	public function configuration()
 	{
 
 		$model = $this->getModel();
@@ -131,21 +131,21 @@ class ApplicationController extends FilesystemController
 	 *
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
-	public function classAction()
+	public function class()
 	{
 
 		return $this->render( 'SKITCBundle:Application:class/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function classFileAction()
+	public function classFile()
 	{
 
 		return $this->render( 'SKITCBundle:Application:class/file/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function classSchemaAction()
+	public function classSchema()
 	{
 
 		$model = $this->getModel();
@@ -177,7 +177,7 @@ class ApplicationController extends FilesystemController
 	
 	}
 
-	public function deleteAction()
+	public function delete()
 	{
 
 		return $this->render( 'SKITCBundle:Application:delete.html.twig', $this->getModel() );

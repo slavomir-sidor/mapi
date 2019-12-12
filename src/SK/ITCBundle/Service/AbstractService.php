@@ -2,21 +2,21 @@
 namespace SK\ITCBundle\Service;
 
 
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 
 abstract class AbstractService
 {
 
 	/**
 	 *
-	 * @var Logger
+	 * @var LoggerInterface
 	 */
 	protected $logger;
 
 	/**
 	 * Constructs Console Bundle Code Generator
 	 */
-	public function __construct( Logger $logger )
+	public function __construct( LoggerInterface $logger )
 	{
 		$this->setLogger( $logger );
 	}
@@ -32,9 +32,9 @@ abstract class AbstractService
 
 	/**
 	 *
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 */
-	protected function setLogger( Logger $logger )
+	protected function setLogger( LoggerInterface $logger )
 	{
 		$this->logger = $logger;
 		return $this;

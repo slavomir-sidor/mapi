@@ -11,7 +11,7 @@ namespace SK\ITCBundle\Command\OS;
 
 use SK\ITCBundle\Service\OS\Command;
 use SK\ITCBundle\Command\TableCommand;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use SK\ITCBundle\Service\Table\Table;
@@ -30,10 +30,10 @@ class ShellCommand extends TableCommand
 	 *
 	 * @param string $name
 	 * @param string $description
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 * @param Command $commad
 	 */
-	public function __construct( $name, $description, Logger $logger, Table $table,
+	public function __construct( $name, $description, LoggerInterface $logger, Table $table,
 		Command $command )
 	{
 		parent::__construct( $name, $description, $logger, $table );

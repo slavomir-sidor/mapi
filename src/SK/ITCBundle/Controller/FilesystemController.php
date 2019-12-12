@@ -9,9 +9,7 @@
  */
 namespace SK\ITCBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Finder\Finder;
-use SK\ITCBundle\Response\Model;
 
 class FilesystemController extends AbstractController
 {
@@ -22,43 +20,43 @@ class FilesystemController extends AbstractController
 		'var'
 	);
 
-	public function indexAction()
+	public function index()
 	{
 		return $this->render( 'SKITCBundle:Filesystem:index.html.twig', $this->getModel() );
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 		return $this->render( 'SKITCBundle:Filesystem:toolbar.html.twig', $this->getModel() );
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 		return $this->render( 'SKITCBundle:Filesystem:workspace.html.twig', $this->getModel() );
 	}
 
-	public function createAction()
+	public function create()
 	{
 		return $this->render( 'SKITCBundle:Filesystem:Create/index.html.twig', $this->getModel() );
 	}
 
-	public function editAction()
+	public function edit()
 	{
 		return $this->render( 'SKITCBundle:Filesystem:Edit/index.html.twig', $this->getModel() );
 	}
 
-	public function saveAction()
+	public function save()
 	{
 		return $this->render( 'SKITCBundle:Filesystem:Save/index.html.twig', $this->getModel() );
 	}
 
-	public function detailAction()
+	public function detail()
 	{
 		$model = $this->getModel();
 		return $this->render( 'SKITCBundle:Filesystem:Detail/index.html.twig', $model );
 	}
 
-	public function deleteAction()
+	public function delete()
 	{
 		return $this->render( 'SKITCBundle:Filesystem:Delete/index.html.twig', $this->getModel() );
 	}
@@ -77,7 +75,7 @@ class FilesystemController extends AbstractController
 		$model['currentRoute'] = $request->get( '_route' );
 
 		$path = $request->get( 'path', '' );
-		$rootDir = $this->get( 'kernel' )->getRootDir();
+		$rootDir = $this->getAppKernel()->getProjectDir();
 		$rootDirInfo = new \SplFileInfo( $rootDir );
 
 		$filesystemPath = sprintf( "%s/%s", $rootDirInfo->getPath(), $path );

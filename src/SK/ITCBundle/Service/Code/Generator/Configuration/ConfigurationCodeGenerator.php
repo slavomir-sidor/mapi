@@ -10,7 +10,7 @@
 namespace SK\ITCBundle\Service\Code\Generator;
 
 use SK\ITCBundle\Service\Code\Reflection;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 
 class ConfigurationCodeGenerator extends CodeGenerator
 {
@@ -22,10 +22,10 @@ class ConfigurationCodeGenerator extends CodeGenerator
 
     /**
      *
-     * @param Logger $logger
+     * @param LoggerInterface $logger
      * @param Reflection $reflection
      */
-    public function __construct(Logger $logger, Reflection $reflection)
+    public function __construct(LoggerInterface $logger, Reflection $reflection)
     {
         parent::__construct ( $logger );
 

@@ -9,7 +9,7 @@
  */
 namespace SK\ITCBundle\Command;
 
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use SK\ITCBundle\Service\Table\Table;
 use Symfony\Component\Console\Input\InputOption;
 use SK\ITCBundle\Service\Table\Adapter\TXT;
@@ -41,10 +41,10 @@ abstract class TableCommand extends AbstractCommand
 	 *
 	 * @param string $name
 	 * @param string $description
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 * @param Table $table
 	 */
-	public function __construct( $name, $description, Logger $logger, Table $table )
+	public function __construct( $name, $description, LoggerInterface $logger, Table $table )
 	{
 		parent::__construct( $name, $description, $logger );
 		$this->setTable( $table );

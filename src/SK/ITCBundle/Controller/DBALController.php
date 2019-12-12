@@ -29,42 +29,42 @@ use Doctrine\ORM\Configuration;
 class DBALController extends FilesystemController
 {
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:DBAL:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:DBAL:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:DBAL:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function connectionAction()
+	public function connection()
 	{
 
 		return $this->render( 'SKITCBundle:DBAL:Connection/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function entityManagerAction()
+	public function entityManager()
 	{
 
 		return $this->render( 'SKITCBundle:DBAL:EntityManager/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function entityAction()
+	public function entity()
 	{
 
 		return $this->render( 'SKITCBundle:DBAL:Entity/index.html.twig', $this->getModel() );

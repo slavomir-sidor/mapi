@@ -24,14 +24,14 @@ class ConsoleController extends FilesystemController
 	 */
 	protected $cliApplication;
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:Console:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		try
@@ -45,21 +45,21 @@ class ConsoleController extends FilesystemController
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:Console:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function namespaceAction()
+	public function namespace()
 	{
 
 		return $this->render( 'SKITCBundle:Console:namespace.html.twig', $this->getModel() );
 	
 	}
 
-	public function runAction()
+	public function run()
 	{
 
 		$model = $this->getModel();
@@ -87,7 +87,7 @@ class ConsoleController extends FilesystemController
 	
 	}
 
-	public function helpAction()
+	public function help()
 	{
 
 		$model = $this->getModel();
@@ -112,7 +112,7 @@ class ConsoleController extends FilesystemController
 	
 	}
 
-	public function commandAction()
+	public function command()
 	{
 
 		return $this->render( 'SKITCBundle:Console:command.html.twig', $this->getModel() );

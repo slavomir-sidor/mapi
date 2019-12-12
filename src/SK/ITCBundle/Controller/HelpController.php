@@ -26,49 +26,49 @@ use Zend\Soap\AutoDiscover;
 class HelpController extends FilesystemController
 {
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:Help:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:Help:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:Help:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function bundleAction()
+	public function bundle()
 	{
 
 		return $this->render( 'SKITCBundle:Help:Bundle/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function schemaAction()
+	public function schema()
 	{
 
 		return $this->render( 'SKITCBundle:Help:Schema/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function wsAction()
+	public function ws()
 	{
 
 		return $this->render( 'SKITCBundle:Help:WS/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function phpunitAction()
+	public function phpunit()
 	{
 
 		return $this->render( 'SKITCBundle:Help:PHPUnit/index.html.twig', $this->getModel() );

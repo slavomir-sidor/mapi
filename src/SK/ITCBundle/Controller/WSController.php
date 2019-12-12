@@ -29,49 +29,49 @@ class WSController extends ApplicationController
 
 	const WSLD_RESOURCE_NAMSPACE_PATTERN = '%s/Resources/Schema/%s';
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:WS:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:WS:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:WS:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function createAction()
+	public function create()
 	{
 
 		return $this->render( 'SKITCBundle:WS:create.html.twig', $this->getModel() );
 	
 	}
 
-	public function editAction()
+	public function edit()
 	{
 
 		return $this->render( 'SKITCBundle:WS:edit.html.twig', $this->getModel() );
 	
 	}
 
-	public function viewAction()
+	public function view()
 	{
 
 		return $this->render( 'SKITCBundle:WS:view.html.twig', $this->getModel() );
 	
 	}
 
-	public function soapAction()
+	public function soap()
 	{
 
 		$x = new \SoapClient( "" );
@@ -79,21 +79,21 @@ class WSController extends ApplicationController
 	
 	}
 
-	public function wsdlAction()
+	public function wsdl()
 	{
 
 		return $this->render( 'SKITCBundle:WS:WSDL/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function bundleAction()
+	public function bundle()
 	{
 
 		return $this->render( 'SKITCBundle:WS:Bundle/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function deleteAction()
+	public function delete()
 	{
 
 		return $this->render( 'SKITCBundle:WS:delete.html.twig', $this->getModel() );

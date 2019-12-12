@@ -1,21 +1,40 @@
 <?php
 namespace SK\ITCBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController as SymfonyAbstractController;
+use Symfony\Component\HttpKernel\KernelInterface;
 
-class AbstractController extends Controller
+abstract class AbstractController extends SymfonyAbstractController
 {
 
-	/**
-	 */
-	public function __construct()
-	{}
+	private $appKernel;
 
 	/**
 	 *
+	 * @return \Symfony\Component\HttpKernel\KernelInterface
 	 */
-	protected function getRequest()
+	protected function getAppKernel()
+	{
+		return $this->appKernel;
+	}
+
+	/**
+	 *
+	 * @param \Symfony\Component\HttpKernel\KernelInterface $appKernel
+	 */
+	protected function setAppKernel( $appKernel )
+	{
+		$this->appKernel = $appKernel;
+	}
+
+	public function __construct( KernelInterface $appKernel )
+	{
+		$this->setAppKernel($appKernel);
+	}
+
+	public function getRequest()
 	{
 		return $this->container->get( 'request_stack' )->getCurrentRequest();
 	}
 }
+

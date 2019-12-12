@@ -16,8 +16,8 @@ use Raml\Parser;
 use Raml\ApiDefinition;
 use Symfony\Component\Console\Input\InputOption;
 use SK\ITCBundle\Command\TableCommand;
-use Symfony\Component\HttpKernel\Log\Logger;
 use SK\ITCBundle\Service\Table\Table;
+use Psr\Log\LoggerInterface;
 
 abstract class RESTCommand extends TableCommand
 {
@@ -41,13 +41,13 @@ abstract class RESTCommand extends TableCommand
 	 *        	SK ITCBundle Abstract Command Name
 	 * @param string $description
 	 *        	SK ITCBundle Abstract Command Description
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 *        	SK ITCBundle Abstract Command Logger
 	 * @param Reflection $reflection
 	 *        	SK ITCBundle Abstract Command Reflection
 	 * @param Parser $apiParser
 	 */
-	public function __construct( $name, $description, Logger $logger, Table $table, Reflection $reflection, Parser $apiParser )
+	public function __construct( $name, $description, LoggerInterface $logger, Table $table, Reflection $reflection, Parser $apiParser )
 	{
 		parent::__construct( $name, $description, $logger, $table, $reflection );
 

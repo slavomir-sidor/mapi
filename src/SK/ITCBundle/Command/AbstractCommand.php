@@ -11,7 +11,7 @@ namespace SK\ITCBundle\Command;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use SK\ITCBundle\Service\Table\Adapter\TXT;
 use SK\ITCBundle\Service\Table\Adapter\SpreedSheet;
 use SK\ITCBundle\Service\Table\Adapter\Excel;
@@ -37,7 +37,7 @@ abstract class AbstractCommand extends Command
 	/**
 	 * SK ITCBundle Abstract Command Logger
 	 *
-	 * @var Logger
+	 * @var LoggerInterface
 	 */
 	protected $logger;
 
@@ -48,10 +48,10 @@ abstract class AbstractCommand extends Command
 	 *        	SK ITCBundle Abstract Command Name
 	 * @param string $description
 	 *        	SK ITCBundle Abstract Command Description
-	 * @param Logger $logger
-	 *        	SK ITCBundle Abstract Command Logger
+	 * @param LoggerInterface $logger
+	 *        	SK ITCBundle Abstract Command LoggerInterface
 	 */
-	public function __construct( $name, $description, Logger $logger )
+	public function __construct( $name, $description, LoggerInterface $logger )
 	{
 		parent::__construct( $name );
 
@@ -68,6 +68,10 @@ abstract class AbstractCommand extends Command
 	{
 		$this->setInput( $input );
 		$this->setOutput( $output );
+		$this->getLogger()->info( 
+			sprintf( "Running '%s '", $this->getName() ));
+				
+				//,implode( " ", $input->getArguments() ), implode( " ", $input->getOptions() ) ));
 	}
 
 	/**
@@ -236,9 +240,9 @@ abstract class AbstractCommand extends Command
 	}
 
 	/**
-	 * Gets SK ITCBundle Abstract Command Logger
+	 * Gets SK ITCBundle Abstract Command LoggerInterface
 	 *
-	 * @return Logger SK ITCBundle Abstract Command Logger
+	 * @return LoggerInterface SK ITCBundle Abstract Command Logger Interface
 	 */
 	public function getLogger()
 	{
@@ -248,11 +252,11 @@ abstract class AbstractCommand extends Command
 	/**
 	 * Sets SK ITCBundle Abstract Command Logger
 	 *
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 *        	SK ITCBundle Abstract Command Logger
 	 * @return \SK\ITCBundle\Command\AbstractCommand SK ITCBundle Abstract Command
 	 */
-	public function setLogger( Logger $logger )
+	public function setLogger( LoggerInterface $logger )
 	{
 		$this->logger = $logger;
 		return $this;

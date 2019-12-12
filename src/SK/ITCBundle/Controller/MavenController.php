@@ -9,12 +9,12 @@
  */
 namespace SK\ITCBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class MavenController extends Controller
+class MavenController extends AbstractController
 {
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:Maven:index.html.twig', array( 
@@ -23,7 +23,7 @@ class MavenController extends Controller
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:Maven:toolbar.html.twig', array( 
@@ -32,7 +32,7 @@ class MavenController extends Controller
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:Maven:workspace.html.twig', array( 
@@ -41,7 +41,7 @@ class MavenController extends Controller
 	
 	}
 
-	public function commandAction()
+	public function command()
 	{
 
 		return $this->render( 'SKITCBundle:Maven:command.html.twig', array( 
@@ -50,7 +50,7 @@ class MavenController extends Controller
 	
 	}
 
-	public function helpAction()
+	public function help()
 	{
 
 		return $this->render( 'SKITCBundle:Maven:command.html.twig', array( 

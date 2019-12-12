@@ -17,7 +17,6 @@ use SK\ITCBundle\Service\Code\Reflection\Collection\OperationCollection;
 use SK\ITCBundle\Service\Code\Reflection\Collection\ParameterCollection;
 use SK\ITCBundle\Service\Code\Reflection\Collection\AttributesCollection;
 use SK\ITCBundle\Service\AbstractService;
-use Symfony\Component\HttpKernel\Log\Logger;
 
 class Reflection extends AbstractService
 {
@@ -105,7 +104,7 @@ class Reflection extends AbstractService
 		if( null === $this->classes )
 		{
 			$classes = new ClassCollection();
-			
+
 			/* @var $file ReflectionFile*/
 			foreach( $this->getFiles() as $file )
 			{
@@ -122,18 +121,20 @@ class Reflection extends AbstractService
 
 			$settings = $this->getSettings();
 
-			$classes = $classes->filter(
+			$classes = $classes->filter( 
 				function ( $class ) use ($settings )
 				{
 					if( NULL !== $settings->getClassName() )
 					{
-						return ( bool ) preg_match( sprintf( "/%s/", preg_quote( $settings->getClassName() ) ), $class->getName() );
+						return ( bool ) preg_match( 
+							sprintf( "/%s/", preg_quote( $settings->getClassName() ) ),
+							$class->getName() );
 					}
 
 					return true;
 				} );
 
-			$classes = $classes->filter(
+			$classes = $classes->filter( 
 				function ( $class ) use ($settings )
 				{
 
@@ -145,7 +146,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$classes = $classes->filter(
+			$classes = $classes->filter( 
 				function ( $class ) use ($settings )
 				{
 					if( NULL !== $settings->getIsFinal() )
@@ -156,7 +157,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$classes = $classes->filter(
+			$classes = $classes->filter( 
 				function ( $class ) use ($settings )
 				{
 					if( NULL !== $settings->getIsInterface() )
@@ -167,7 +168,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$classes = $classes->filter(
+			$classes = $classes->filter( 
 				function ( $class ) use ($settings )
 				{
 					if( NULL !== $settings->getIsTrait() )
@@ -178,7 +179,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$classes = $classes->filter(
+			$classes = $classes->filter( 
 				function ( $class ) use ($settings )
 				{
 					if( count( $settings->getParentClass() ) > 0 )
@@ -197,7 +198,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$classes = $classes->filter(
+			$classes = $classes->filter( 
 				function ( $class ) use ($settings )
 				{
 					if( count( $settings->getImplementsInterface() ) > 0 )
@@ -252,33 +253,37 @@ class Reflection extends AbstractService
 				/* @var $operation ReflectionMethod */
 				foreach( $class->getMethods() as $operation )
 				{
-					$operations->set( $class->getName() . $operation->getName(), $operation );
+					$operations->set( $class->getName() . $operation->getName(),
+						$operation );
 				}
 			}
 
 			$settings = $this->getSettings();
 
-			$operations = $operations->filter(
+			$operations = $operations->filter( 
 				function ( $operation ) use ($settings )
 				{
 					if( NULL !== $settings->getOperationName() )
 					{
-						return ( bool ) preg_match( sprintf( "/%s/", preg_quote( $settings->getOperationName() ) ), $operation->getName() );
+						return ( bool ) preg_match( 
+							sprintf( "/%s/", preg_quote( $settings->getOperationName() ) ),
+							$operation->getName() );
 					}
 
 					return true;
 				} );
-			$operations = $operations->filter(
+			$operations = $operations->filter( 
 				function ( $operation ) use ($settings )
 				{
 					if( NULL !== $settings->getIsAbstractOperation() )
 					{
-						return ( $settings->getIsAbstractOperation() == $operation->isAbstract() );
+						return ( $settings->getIsAbstractOperation() ==
+						$operation->isAbstract() );
 					}
 					return true;
 				} );
 
-			$operations = $operations->filter(
+			$operations = $operations->filter( 
 				function ( $operation ) use ($settings )
 				{
 					if( NULL !== $settings->getIsPrivate() )
@@ -289,7 +294,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$operations = $operations->filter(
+			$operations = $operations->filter( 
 				function ( $operation ) use ($settings )
 				{
 					if( NULL !== $settings->getIsProtected() )
@@ -299,7 +304,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$operations = $operations->filter(
+			$operations = $operations->filter( 
 				function ( $operation ) use ($settings )
 				{
 					if( NULL !== $settings->getIsPublic() )
@@ -309,7 +314,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$operations = $operations->filter(
+			$operations = $operations->filter( 
 				function ( $operation ) use ($settings )
 				{
 					if( NULL !== $settings->getIsStatic() )
@@ -319,7 +324,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$operations = $operations->filter(
+			$operations = $operations->filter( 
 				function ( $operation ) use ($settings )
 				{
 					if( NULL !== $settings->getIsStatic() )
@@ -366,8 +371,7 @@ class Reflection extends AbstractService
 
 				if( is_file( $source ) )
 				{
-					$finder->append( array(
-						$source
+					$finder->append( array($source
 					) );
 				}
 			}
@@ -423,14 +427,16 @@ class Reflection extends AbstractService
 			{
 				try
 				{
+					$this->getLogger()->notice( sprintf( "Processing : %s", $fileName ) );
 					/* @var $fileReflection ReflectionFile */
 					$file = $this->getBroker()->processFile( $fileName, true );
 					$files->set( $file->getName(), $file );
 				}
 				catch( \Exception $exception )
 				{
-					
-					$this->getLogger()->notice( $exception->getMessage() );
+					$this->getLogger()->error( 
+						sprintf( "%s:", $exception->getMessage(),
+							$exception->getTraceAsString() ) );
 				}
 			}
 
@@ -516,25 +522,28 @@ class Reflection extends AbstractService
 				/* @var $attribute ReflectionProperty */
 				foreach( $class->getProperties() as $attribute )
 				{
-					$attributes->set( $class->getName() . $attribute->getName(), $attribute );
+					$attributes->set( $class->getName() . $attribute->getName(),
+						$attribute );
 				}
 			}
 
 			$settings = $this->getSettings();
 
-			$attributes = $attributes->filter(
+			$attributes = $attributes->filter( 
 
 				function ( $attribute ) use ($settings )
 				{
 					if( NULL !== $settings->getAttributeName() )
 					{
-						return ( bool ) preg_match( sprintf( "/%s/", $settings->getAttributeName() ), $attribute->getName() );
+						return ( bool ) preg_match( 
+							sprintf( "/%s/", $settings->getAttributeName() ),
+							$attribute->getName() );
 					}
 
 					return true;
 				} );
 
-			$attributes = $attributes->filter(
+			$attributes = $attributes->filter( 
 
 				function ( $attribute ) use ($settings )
 				{
@@ -546,7 +555,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$attributes = $attributes->filter(
+			$attributes = $attributes->filter( 
 
 				function ( $attribute ) use ($settings )
 				{
@@ -558,7 +567,7 @@ class Reflection extends AbstractService
 					return true;
 				} );
 
-			$attributes = $attributes->filter(
+			$attributes = $attributes->filter( 
 
 				function ( $attribute ) use ($settings )
 				{
@@ -613,13 +622,15 @@ class Reflection extends AbstractService
 
 			$settings = $this->getSettings();
 
-			$parameters = $parameters->filter(
+			$parameters = $parameters->filter( 
 
 				function ( $parameter ) use ($settings )
 				{
 					if( NULL !== $settings->getParameterName() )
 					{
-						return ( bool ) preg_match( sprintf( "/%s/", $settings->getParameterName() ), $parameter->getName() );
+						return ( bool ) preg_match( 
+							sprintf( "/%s/", $settings->getParameterName() ),
+							$parameter->getName() );
 					}
 
 					return true;

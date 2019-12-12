@@ -3,7 +3,7 @@
 namespace SK\ITCBundle\Service\Google;
 
 use SK\ITCBundle\Service\AbstractService;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Google\Spreadsheet\DefaultServiceRequest;
 use Google\Spreadsheet\ServiceRequestFactory;
 use Google\Spreadsheet\SpreadsheetService;
@@ -24,10 +24,10 @@ class Spreadsheet extends AbstractService
 
     /**
      *
-     * @param Logger $logger
+     * @param LoggerInterface $logger
      * @param string $token
      */
-    public function __construct($logger, $token)
+    public function __construct(LoggerInterface $logger, $token)
     {
         parent::__construct ( $logger );
 

@@ -20,7 +20,7 @@ class APIModelController extends AbstractController
 	/**
 	 *
 	 */
-	public function indexAction()
+	public function index()
 	{
 		$method=$this->getMethod();
 		$version=$this->getVersion();

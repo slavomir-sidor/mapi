@@ -26,63 +26,63 @@ use Zend\Soap\AutoDiscover;
 class ITCController extends FilesystemController
 {
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:Filesystem:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function jenkinsAction()
+	public function jenkins()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:Jenkins/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function tomcatAction()
+	public function tomcat()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:Tomcat/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function nexusAction()
+	public function nexus()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:Nexus/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function sonarAction()
+	public function sonar()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:Sonar/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function adminAction()
+	public function admin()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:Admin/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function gitAction()
+	public function git()
 	{
 
 		return $this->render( 'SKITCBundle:ITC:Git/index.html.twig', $this->getModel() );

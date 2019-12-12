@@ -2,7 +2,7 @@
 namespace SK\ITCBundle\Service\Table;
 
 use SK\ITCBundle\Service\AbstractService;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Helper\TableCell;
 use SK\ITCBundle\Service\Table\Adapter\TXT;
@@ -72,9 +72,9 @@ class Table extends AbstractService
 
 	/**
 	 *
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 */
-	public function __construct( Logger $logger, $maxColWidth )
+	public function __construct( LoggerInterface $logger, $maxColWidth )
 	{
 		parent::__construct( $logger );
 

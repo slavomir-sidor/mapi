@@ -12,7 +12,7 @@ use SK\ITCBundle\Command\Code\Reflection\ReflectionCommand;
 use SK\ITCBundle\Service\Code\Reflection;
 use Symfony\Component\Console\Input\InputOption;
 use JMS\Serializer\Serializer;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use SK\ITCBundle\Service\Table\Table;
 
 class ReportCommand extends ReflectionCommand
@@ -29,11 +29,11 @@ class ReportCommand extends ReflectionCommand
 	 *
 	 * @param string $name
 	 * @param string $description
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 * @param Reflection $reflection
 	 * @param Serializer $serializer
 	 */
-	public function __construct( $name, $description, Logger $logger, Table $table, Reflection $reflection, Serializer $serializer )
+	public function __construct( $name, $description, LoggerInterface $logger, Table $table, Reflection $reflection, Serializer $serializer )
 	{
 		parent::__construct( $name, $description, $logger, $table, $reflection );
 

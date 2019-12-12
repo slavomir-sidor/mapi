@@ -2,7 +2,7 @@
 namespace SK\ITCBundle\Service\RAML\Schema;
 
 use Raml\ApiDefinition;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use JMS\Serializer\Serializer;
 use Raml\Resource;
 use Raml\Method;
@@ -23,10 +23,10 @@ class Writer extends AbstractService
 
 	/**
 	 *
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 * @param Serializer $serializer
 	 */
-	public function __construct(Logger $logger, Serializer $serializer)
+	public function __construct(LoggerInterface $logger, Serializer $serializer)
 	{
 		parent::__construct ( $logger );
 		$this->setSerializer ( $serializer );

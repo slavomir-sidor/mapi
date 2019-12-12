@@ -13,7 +13,7 @@ use SK\ITCBundle\Service\Code\Generator\WSDL\AbstractGenerator;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 
 class Controller extends AbstractGenerator
 {

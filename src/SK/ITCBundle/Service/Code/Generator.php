@@ -15,7 +15,7 @@ use SK\ITCBundle\Service\Code\Generator\Collection\OperationCollection;
 use SK\ITCBundle\Service\Code\Generator\Collection\ParameterCollection;
 use SK\ITCBundle\Service\Code\Generator\Collection\AttributesCollection;
 use SK\ITCBundle\Service\AbstractService;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 
 class Generator extends AbstractService
 {
@@ -72,10 +72,10 @@ class Generator extends AbstractService
 	/**
 	 * Constructs SK ITCBundle Code Generator
 	 *
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 * @param Reflection $reflection
 	 */
-	public function __construct( Logger $logger, Reflection $reflection )
+	public function __construct( LoggerInterface $logger, Reflection $reflection )
 	{
 		$this->setLogger( $logger );
 		$this->setReflection( $reflection );

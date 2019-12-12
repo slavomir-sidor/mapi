@@ -1,20 +1,20 @@
 <?php
-
 namespace SK\ITCBundle\Service\IService;
 
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 
 interface IService
 {
-    /**
-     *
-     * @return the Logger
-     */
-    public function getLogger();
 
-    /**
-     *
-     * @param Logger $logger
-     */
-    public function setLogger(Logger $logger);
+	/**
+	 *
+	 * @return LoggerInterface
+	 */
+	public function getLogger();
+
+	/**
+	 *
+	 * @param LoggerInterface $logger
+	 */
+	public function setLogger( LoggerInterface $logger );
 }

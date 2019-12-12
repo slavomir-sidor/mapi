@@ -16,7 +16,7 @@ use Symfony\Component\Console\Input\InputOption;
 use SK\ITCBundle\Service\Code\Reflection;
 use SK\ITCBundle\Command\TableCommand;
 use SK\ITCBundle\Service\Code\Reflection\Settings;
-use Symfony\Component\HttpKernel\Log\Logger;
+use Psr\Log\LoggerInterface;
 use SK\ITCBundle\Service\Table\Table;
 
 class ReflectionCommand extends TableCommand
@@ -39,11 +39,11 @@ class ReflectionCommand extends TableCommand
 	 *
 	 * @param string $name
 	 * @param string $description
-	 * @param Logger $logger
+	 * @param LoggerInterface $logger
 	 * @param Table $table
 	 * @param Reflection $reflection
 	 */
-	public function __construct( $name, $description, Logger $logger, Table $table,
+	public function __construct( $name, $description, LoggerInterface $logger, Table $table,
 		Reflection $reflection )
 	{
 		parent::__construct( $name, $description, $logger, $table );

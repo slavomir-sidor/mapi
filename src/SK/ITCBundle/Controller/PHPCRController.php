@@ -17,49 +17,49 @@ use SK\ITCBundle\Response\Model;
 class PHPCRController extends FilesystemController
 {
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:PHPCR:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:PHPCR:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:PHPCR:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function createAction()
+	public function create()
 	{
 
 		return $this->render( 'SKITCBundle:PHPCR:Create/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function editAction()
+	public function edit()
 	{
 
 		return $this->render( 'SKITCBundle:PHPCR:Edit/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function saveAction()
+	public function save()
 	{
 
 		return $this->render( 'SKITCBundle:PHPCR:Save/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function detailAction()
+	public function detail()
 	{
 
 		$model = $this->getModel();
@@ -67,7 +67,7 @@ class PHPCRController extends FilesystemController
 	
 	}
 
-	public function deleteAction()
+	public function delete()
 	{
 
 		return $this->render( 'SKITCBundle:PHPCR:Delete/index.html.twig', $this->getModel() );

@@ -17,98 +17,98 @@ class PHPUnitController extends ApplicationController
 
 	protected $phpunit;
 
-	public function indexAction()
+	public function index()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:index.html.twig', $this->getModel() );
 	
 	}
 
-	public function toolbarAction()
+	public function toolbar()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:toolbar.html.twig', $this->getModel() );
 	
 	}
 
-	public function workspaceAction()
+	public function workspace()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:workspace.html.twig', $this->getModel() );
 	
 	}
 
-	public function bundleAction()
+	public function bundle()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Bundle/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function configurationAction()
+	public function configuration()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Configuration/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function configurationFilterAction()
+	public function configurationFilter()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Configuration/filter.html.twig', $this->getModel() );
 	
 	}
 
-	public function configurationLoggingAction()
+	public function configurationLogging()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Configuration/logging.html.twig', $this->getModel() );
 	
 	}
 
-	public function configurationPhpAction()
+	public function configurationPhp()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Configuration/php.html.twig', $this->getModel() );
 	
 	}
 
-	public function groupAction()
+	public function group()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Group/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function testsuiteAction()
+	public function testsuite()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:TestSuite/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function testAction()
+	public function test()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Test/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function caseAction()
+	public function case()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Case/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function reportAction()
+	public function report()
 	{
 
 		return $this->render( 'SKITCBundle:PHPUnit:Report/index.html.twig', $this->getModel() );
 	
 	}
 
-	public function runAction()
+	public function run()
 	{
 		// $model = $this->getModel();
 		// $model = $model['model'];

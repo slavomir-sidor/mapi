@@ -9,7 +9,7 @@
  */
 namespace SK\ITCBundle\Command\Code\Generator\DTD;
 
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

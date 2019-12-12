@@ -12,22 +12,22 @@ namespace SK\ITCBundle\Controller;
 class DefaultController extends FilesystemController
 {
 
-	public function indexAction()
+	public function index()
 	{
 		return $this->render( 'SKITCBundle:Default:index.html.twig', $this->getModel() );
 	}
 
-	public function toolbarAction( $path = NULL )
+	public function toolbar( $path = NULL )
 	{
 		return $this->render( 'SKITCBundle:Default:toolbar.html.twig', $this->getModel() );
 	}
 
-	public function workspaceAction( $path = NULL )
+	public function workspace( $path = NULL )
 	{
 		return $this->render( 'SKITCBundle:Default:workspace.html.twig', $this->getModel() );
 	}
 
-	public function eastPaneAction( $path = NULL )
+	public function eastPane( $path = NULL )
 	{
 		return $this->render( 'SKITCBundle:Default:eastPane.html.twig', $this->getModel() );
 	}

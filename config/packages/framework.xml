@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container
+	xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:framework="http://symfony.com/schema/dic/symfony"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services
+        https://symfony.com/schema/dic/services/services-1.0.xsd
+        http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+
+	<framework:config secret="%env(APP_SECRET)%">
+
+		<framework:session enabled="true" />
+		<!-- <framework:translator enabled="%framework.translator.enabled%" fallback="%framework.translator.fallback%" 
+			/> <framework:fragments enabled="%framework.fragments.enabled%" path="%framework.fragments.path%" /> -->
+	</framework:config>
+
+</container>

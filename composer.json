@@ -1,5 +1,6 @@
 {
-    "type": "project",
+    "type": "symfony-bundle",
+    "name": "itc/mitc-bundle",
     "license": "proprietary",
     "require": {
         "php": "^7.2.5",

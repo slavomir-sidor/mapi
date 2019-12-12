@@ -315,9 +315,9 @@
 
 	<route
 		id="itc_ci_sonar"
-		path="/sonar">
+		path="/sonar/{_locale}">
 
-		<default key="_locale">%framew/{_locale}">k.translator.fallback%</default>
+		<default key="_locale">%framework.translator.fallback%</default>
 		<default key="_controller">SKITCBundle:CI:sonar</default>
 
 		<requirement key="_locale">%framework.translator.locales%</requirement>
@@ -348,7 +348,7 @@
 
 	<route
 		id="itc_dbal"
-		path="/{_locale}/{_locale}">
+		path="/dbal/{_locale}/">
 
 		<default key="_controller">SKITCBundle:DBAL:index</default>
 		<default key="_locale">%framework.translator.fallback%</default>

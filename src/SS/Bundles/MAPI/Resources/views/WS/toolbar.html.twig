@@ -1,0 +1,35 @@
+{% extends 'SSMAPIBundle::Filesystem/toolbar.html.twig' %}
+
+{% block toolbarTitle %}
+	{{ parent() }}
+{% endblock %}
+
+{% block toolbarButtonSet %}
+
+	<h2>
+		{% trans %}WS{% endtrans %}
+	</h2>
+
+	<a href="{{ path('mapi_ws') }}">
+		{% trans %}Home{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_ws_wsdl') }}">
+		{% trans %}WSDL{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_ws_soap') }}">
+		{% trans %}SOAP{% endtrans %}
+	</a>
+	
+	<a href="{{ path('mapi_ws_rest') }}">
+		{% trans %}REST{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_ws_json') }}">
+		{% trans %}JSON{% endtrans %}
+	</a>
+
+	{{ parent() }}
+
+{% endblock %}

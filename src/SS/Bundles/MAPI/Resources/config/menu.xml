@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container
+	xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<parameters>
+
+		<parameter
+			key="ss.mapibundle.menu.builder.items"
+			type="collection">
+
+			<parameter type="collection">
+
+				<parameter key="label">Web</parameter>
+				<parameter
+					key="options"
+					type="collection">
+					<parameter key="route">homepage</parameter>
+				</parameter>
+
+			</parameter>
+
+			<parameter type="collection">
+
+				<parameter key="label">Application</parameter>
+				<parameter
+					key="options"
+					type="collection">
+					<parameter key="route">mapi_application</parameter>
+				</parameter>
+
+				<parameter
+					key="items"
+					type="collection">
+
+					<parameter type="collection">
+						<parameter key="label">Bundle</parameter>
+						<parameter
+							key="options"
+							type="collection">
+
+							<parameter key="route">mapi_application_bundle</parameter>
+
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">Schema</parameter>
+						<parameter
+							key="options"
+							type="collection">
+
+							<parameter key="route">mapi_schema</parameter>
+
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">WS</parameter>
+						<parameter
+							key="options"
+							type="collection">
+
+							<parameter key="route">mapi_ws</parameter>
+
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">DBAL</parameter>
+						<parameter
+							key="options"
+							type="collection">
+
+							<parameter key="route">mapi_dbal</parameter>
+
+						</parameter>
+					</parameter>
+
+					<!-- <parameter key="mapi_orm"> <parameter key="label">ORM</parameter> <parameter key="options" type="collection"> <parameter key="route">mapi_orm</parameter> 
+						</parameter> </parameter> -->
+
+					<parameter type="collection">
+						<parameter key="label">Tests</parameter>
+						<parameter
+							key="options"
+							type="collection">
+
+							<parameter key="route">mapi_phpunit</parameter>
+
+						</parameter>
+					</parameter>
+
+				</parameter>
+
+			</parameter>
+
+			<parameter type="collection">
+
+				<parameter key="label">Filesystem</parameter>
+				<parameter
+					key="options"
+					type="collection">
+					<parameter key="route">mapi_filesystem</parameter>
+				</parameter>
+
+				<parameter
+					key="items"
+					type="collection">
+
+					<parameter type="collection">
+						<parameter key="label">Bundle</parameter>
+						<parameter
+							key="options"
+							type="collection">
+
+							<parameter key="route">mapi_application_bundle</parameter>
+
+						</parameter>
+					</parameter>
+
+				</parameter>
+
+			</parameter>
+
+			<parameter type="collection">
+
+				<parameter key="label">Documentation</parameter>
+				<parameter
+					key="options"
+					type="collection">
+					<parameter key="route">mapi_help</parameter>
+				</parameter>
+
+				<parameter
+					key="items"
+					type="collection">
+
+					<parameter type="collection">
+						<parameter key="label">Application</parameter>
+						<parameter
+							key="options"
+							type="collection">
+							<parameter key="route">mapi_help</parameter>
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">Bundles</parameter>
+						<parameter
+							key="options"
+							type="collection">
+							<parameter key="route">mapi_help_bundle</parameter>
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">Schema</parameter>
+						<parameter
+							key="options"
+							type="collection">
+							<parameter key="route">mapi_help_schema</parameter>
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">WS</parameter>
+						<parameter
+							key="options"
+							type="collection">
+							<parameter key="route">mapi_help_ws</parameter>
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">WS</parameter>
+						<parameter
+							key="options"
+							type="collection">
+							<parameter key="route">mapi_help_ws</parameter>
+						</parameter>
+					</parameter>
+
+					<parameter type="collection">
+						<parameter key="label">DBAL</parameter>
+						<parameter
+							key="options"
+							type="collection">
+							<parameter key="route">mapi_help_dbal</parameter>
+						</parameter>
+					</parameter>
+
+				</parameter>
+
+			</parameter>
+
+		</parameter>
+
+	</parameters>
+
+</container>

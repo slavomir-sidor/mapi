@@ -1,0 +1,31 @@
+{% extends 'SSMAPIBundle::Default/toolbar.html.twig' %}
+
+{% block toolbarTitle %}
+	<h2>
+		{% trans %}Workspace{% endtrans %}
+	</h2>
+{% endblock %}
+
+{% block toolbarInput %}
+	<input id="path" type="hidden" name="path" value="{{ path }}" />
+{% endblock %}
+
+{% block toolbarButtonSet %}
+
+	<a href="{{ path('mapi_filesystem', {'path':pathInfo.getPath()})}}">
+		{% trans %}List{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_filesystem', {'path':pathInfo.getPath()})}}">
+		{% trans %}Reload{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_filesystem_create') }}">
+		{% trans %}Create{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_filesystem_delete') }}">
+		{% trans %}Delete{% endtrans %}
+	</a>
+
+{% endblock %}

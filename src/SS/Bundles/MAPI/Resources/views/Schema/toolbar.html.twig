@@ -1,0 +1,25 @@
+{% extends 'SSMAPIBundle::Filesystem/toolbar.html.twig' %}
+
+{% block toolbarButtonSet %}
+	<h3>
+		{% trans %}Schema{% endtrans %}
+	</h3>
+
+	<a href="{{ path('mapi_schema') }}">
+		{% trans %}Home{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_schema_documentation') }}">
+		{% trans %}Documentation{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_schema_explorer') }}">
+		{% trans %}Explorer{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_schema_interchange') }}">
+		{% trans %}Interchange{% endtrans %}
+	</a>
+
+	{{ parent() }}
+{% endblock %}

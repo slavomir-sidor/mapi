@@ -1,0 +1,19 @@
+{% extends 'SSMAPIBundle::workspace.html.twig' %}
+
+{% block toolbar %}
+	{% include "SSMAPIBundle::Console:command.toolbar.html.twig" %}
+{% endblock %}	
+
+{% block workspace %}
+	<div class="ui-layout-center">
+		{% include "SSMAPIBundle::Console:command.form.html.twig" with {
+			'command':command
+			} %}
+	</div>
+{% endblock %}
+
+{% block southPane %}
+	<div class="ui-layout-south">
+		{{ command.getHelp() }}
+	</div>
+{% endblock %}

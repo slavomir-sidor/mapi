@@ -1,0 +1,40 @@
+{% extends 'SSMAPIBundle::workspace.html.twig' %}
+
+{% block body %}
+	<body>
+		<form class="ui-layout perspectives filesystem ui-state-loading">
+
+			{% block toolbar %}
+			{% include "SSMAPIBundle::Filesystem/toolbar.html.twig" with {'model':model} %}
+			{% endblock %}
+
+			{% block westPane %}
+			{% include "SSMAPIBundle::Filesystem/westPane.html.twig" with {'model':model} %}
+			{% endblock %}
+
+			{% block workspace %}
+			{% include "SSMAPIBundle::Filesystem/workspace.html.twig" with {'model':model} %}
+			{% endblock %}
+	
+			{% block eastPane %}
+			{% include "SSMAPIBundle::Filesystem/eastPane.html.twig" with {'model':model} %}
+			{% endblock %}
+
+			{% block southPane %}
+			{% include "SSMAPIBundle::Filesystem/southPane.html.twig" with {'model':model} %}
+			{% endblock %}
+
+		</form>
+	</body>
+{% endblock %}
+
+{% block javaScriptHeaderCode %}
+
+	{{ parent() }}
+
+	<script type="text/javascript">
+		$(document).bind('ready', function(event) {
+			var filesystem=$('.perspectives').perspective_filesystem();
+		});
+	</script>
+{% endblock %}

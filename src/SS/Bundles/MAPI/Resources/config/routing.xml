@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes
+	xmlns="http://symfony.com/schema/routing"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+	<route
+		id="mapi_homepage"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Default:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_toolbar"
+		path="/toolbar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Default:toolbar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_workspace"
+		path="/workspace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Default:workspace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_switch_locale"
+		path="/switch-locale/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Default:switchLocale</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<!-- Application -->
+	<route
+		id="mapi_application"
+		path="{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_filesystem"
+		path="/filesystem/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:filesystem</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_bundle"
+		path="/bundle/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:bundle</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_namespace"
+		path="/namespace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:namespace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_container"
+		path="/container/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:container</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_class"
+		path="/class/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:class</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_class_operation"
+		path="/class/operation/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:classOperation</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_class_attribute"
+		path="/class/attribute/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:classAttribute</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_class_file"
+		path="/class/file/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:classFile</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_class_schema"
+		path="/class/schema/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:classSchema</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_class_wsdl"
+		path="/class/wsdl/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:classWsdl</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_class_tests"
+		path="/class/tests/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:classTests</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_application_configuration"
+		path="/configuration/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Application:configuration</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_console"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Console:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_console_toolbar"
+		path="/toolbar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Console:toolbar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_console_workspace"
+		path="/workspace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Console:workspace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_console_command"
+		path="/command/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Console:command</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_console_help"
+		path="/help/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Console:help</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_console_run"
+		path="/run/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Console:run</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_mylyn_report"
+		path="/{_locale}/mylyn/report">
+
+		<default key="_controller">SSMAPIBundle:Mylyn:report</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ci"
+		path="">
+
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_controller">SSMAPIBundle:CI:index</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ci_jenkins"
+		path="/jenkins">
+
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_controller">SSMAPIBundle:CI:jenkins</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ci_tomcat"
+		path="/tomcat">
+
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_controller">SSMAPIBundle:CI:tomcat</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ci_nexus"
+		path="/nexus">
+
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_controller">SSMAPIBundle:CI:nexus</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ci_sonar"
+		path="/sonar">
+
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_controller">SSMAPIBundle:CI:sonar</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ci_admin"
+		path="/admin">
+
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_controller">SSMAPIBundle:CI:admin</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ci_git"
+		path="/git">
+
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_controller">SSMAPIBundle:CI:git</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_dbal"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:DBAL:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_dbal_connection"
+		path="/connection/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:DBAL:connection</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_dbal_orm"
+		path="/orm/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:DBAL:orm</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_dbal_em"
+		path="/entity-manager/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:DBAL:entityManager</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_dbal_entity"
+		path="/entity/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:DBAL:entity</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_dbal_configuration"
+		path="/configuration/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:DBAL:configuration</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+	</route>
+
+	<route
+		id="mapi_filesystem"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Filesystem:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_filesystem_toolbar"
+		path="/toolbar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Filesystem:toolbar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_filesystem_workspace"
+		path="/workspace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Filesystem:workspace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_filesystem_detail"
+		path="/detail/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Filesystem:detail</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_filesystem_edit"
+		path="/edit/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Filesystem:edit</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_filesystem_save"
+		methods="post"
+		path="/save/{_locale}">
+
+
+		<default key="_controller">SSMAPIBundle:Filesystem:save</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_filesystem_create"
+		path="/create/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Filesystem:create</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_filesystem_delete"
+		path="/delete/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Filesystem:delete</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_help"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Help:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_help_bundle"
+		path="/bundle/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Help:bundle</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_help_schema"
+		path="/schema/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Help:schema</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_help_ws"
+		path="/ws/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Help:ws</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_help_phpunit"
+		path="/phpunit/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Help:phpunit</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+
+	<route
+		id="mapi_help_dbal"
+		path="/dbal/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Help:dbal</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_saas"
+		path="{_locale}">
+
+		<default key="_controller">SSMAPIBundle:ITC:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_saas_jenkins"
+		path="/jenkins/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:ITC:jenkins</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_saas_tomcat"
+		path="/tomcat/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:ITC:tomcat</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_saas_nexus"
+		path="/nexus/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:ITC:nexus</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_saas_sonar"
+		path="/sonar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:ITC:sonar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_saas_admin"
+		path="/admin/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:ITC:admin</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_saas_git"
+		path="/git/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:ITC:git</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_maven"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Maven:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<!-- PHPCR -->
+	<route
+		id="mapi_phpcr"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_toolbar"
+		path="/toolbar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:toolbar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_workspace"
+		path="/workspace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:workspace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_query"
+		path="/query/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:query</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_query"
+		path="/query-result/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:queryResult</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_detail"
+		path="/detail/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:detail</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_edit"
+		path="/edit/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:edit</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_save"
+		methods="post"
+		path="/save/{_locale}">
+
+
+		<default key="_controller">SSMAPIBundle:PHPCR:save</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_create"
+		path="/create/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:create</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpcr_delete"
+		path="/delete/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPCR:delete</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<!-- PHPUnit -->
+	<route
+		id="mapi_phpunit"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_toolbar"
+		path="/toolbar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:toolbar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_workspace"
+		path="/workspace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:workspace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_testsuite"
+		path="/testsuite/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:testsuite</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_test"
+		path="/test/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:test</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_case"
+		path="/case/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:case</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_group"
+		path="/group/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:group</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_run"
+		path="/run/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:run</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_report"
+		path="/report/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:report</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_bundle"
+		path="/bundle/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:bundle</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_generate_data"
+		path="/generate-data/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:generateData</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_generate_fcase"
+		path="/generate-fcase/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:generateFCase</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_generate_ptest"
+		path="/generate-pcase/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:generatePerformaceTest</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_configuration"
+		path="/configuration/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:configuration</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_configuration_filter"
+		path="/configuration/filter/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:configurationFilter</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_configuration_logging"
+		path="/configuration/logging/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:configurationLogging</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_phpunit_configuration_php"
+		path="/configuration/php/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:PHPUnit:configurationPhp</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<!-- Schema -->
+	<route
+		id="mapi_schema"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_schema_toolbar"
+		path="/toolbar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:toolbar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_schema_workspace"
+		path="/workspace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:workspace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_schema_bundle"
+		path="/bundle/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:bundle</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_schema_explorer"
+		path="/explorer/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:explorer</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_schema_interchange"
+		path="/interchange/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:interchange</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_schema_documentation"
+		path="/documentation/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:documentation</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_schema_help"
+		path="/help/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:Schema:help</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<!-- WS -->
+	<route
+		id="mapi_ws"
+		path="/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_toolbar"
+		path="/toolbar/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:toolbar</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_workspace"
+		path="/workspace/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:workspace</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_view"
+		path="/view/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:view</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_edit"
+		path="/edit/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:view</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_create"
+		path="/create/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:create</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_delete"
+		path="/delete/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:delete</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_bundle"
+		path="/bundle/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:bundle</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_class"
+		path="/class/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:class</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_wsdl"
+		path="/wsdl/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:wsdl</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_soap"
+		path="/soap/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:soap</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_rest"
+		path="/rest/{_locale}">
+
+		<default key="_controller">SSMAPIBundle:WS:rest</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_ws_json"
+		path="/json/{_locale}">
+
+		<default key="_controller/{_locale}">SSMAPIBundle:WS:json</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+
+		<requirement key="_locale">%framework.translator.locales%</requirement>
+
+	</route>
+
+	<route
+		id="mapi_api_model"
+		path="/api/{_version}/{_locale}/{_model}/{_operation}">
+
+		<default key="_controller">SSMAPIBundle:APIModel:index</default>
+		<default key="_locale">%framework.translator.fallback%</default>
+		<default key="_version">%ss.mapibundle.api.version%</default>
+
+	</route>
+
+</routes>

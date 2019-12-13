@@ -1,0 +1,27 @@
+{% extends 'SSMAPIBundle::base.html.twig' %}
+
+{% block body %}
+	<body class="ui-layout perspectives ui-state-working">
+
+		{% block toolbar %}
+		{% include "SSMAPIBundle::Filesystem:toolbar.html.twig" with {'model':model} %}
+		{% endblock %}
+
+		{% block workspace %}
+		{% include "SSMAPIBundle::Filesystem:workspace.html.twig" with {'model':model} %}
+		{% endblock %}
+
+		{% block westPane %}
+		{% endblock %}
+
+		{% block eastPane %}
+		{% endblock %}
+
+		{% block southPane %}
+		{% endblock %}
+
+	</body>
+{% endblock %}
+
+{% block locale %}
+{% endblock %}

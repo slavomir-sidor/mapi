@@ -2,7 +2,7 @@
 <?php
 
 use SS\App\Kernel;
-use Symfony\Bundle\FrameworkBundle\Console\Application;
+use SS\MAPIBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\ErrorHandler\Debug;
 

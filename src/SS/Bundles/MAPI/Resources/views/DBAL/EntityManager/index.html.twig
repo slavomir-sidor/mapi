@@ -1,0 +1,21 @@
+{% extends 'SSMAPIBundle::DBAL/index.html.twig' %}
+
+{% block toolbar %}
+{% include "SSMAPIBundle::DBAL/EntityManager/toolbar.html.twig" with {'model':model} %}
+{% endblock %}
+
+{% block westPane %}
+{% include "SSMAPIBundle::DBAL/EntityManager/westPane.html.twig" with {'model':model}%}
+{% endblock %}
+
+{% block workspace %}
+{% include "SSMAPIBundle::DBAL/EntityManager/workspace.html.twig" with {'model':model} %}
+{% endblock %}
+
+{% block eastPane %}
+{% include "SSMAPIBundle::DBAL/EntityManager/eastPane.html.twig" with {'model':model} %}
+{% endblock %}
+
+{% block southPane %}
+{% include "SSMAPIBundle::DBAL/EntityManager/southPane.html.twig" with {'model':model} %}
+{% endblock %}

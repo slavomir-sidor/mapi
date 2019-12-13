@@ -1,0 +1,21 @@
+{% extends 'SSMAPIBundle::PHPUnit/index.html.twig' %}
+
+{% block toolbar %}
+{% include "SSMAPIBundle::PHPUnit/Group/toolbar.html.twig" with { 'model': model} %}
+{% endblock %}
+
+{% block westPane %}
+{% include "SSMAPIBundle::PHPUnit/Group/westPane.html.twig" with { 'model': model} %}
+{% endblock %}
+
+{% block workspace %}
+{% include "SSMAPIBundle::PHPUnit/Group/workspace.html.twig" with { 'model': model} %}
+{% endblock %}
+
+{% block eastPane %}
+{% include "SSMAPIBundle::PHPUnit/Group/eastPane.html.twig" with { 'model': model} %}
+{% endblock %}
+
+{% block southPane %}
+{% include "SSMAPIBundle::PHPUnit/Group/southPane.html.twig" with { 'model': model} %}
+{% endblock %}

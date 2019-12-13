@@ -1,0 +1,21 @@
+{% extends 'SSMAPIBundle::Help/index.html.twig' %}
+
+{% block toolbar %}
+{% include "SSMAPIBundle::Help/Schema/toolbar.html.twig" with {'model':model} %}
+{% endblock %}
+
+{% block westPane %}
+{% include "SSMAPIBundle::Help/Schema/westPane.html.twig" with {'model':model}%}
+{% endblock %}
+
+{% block workspace %}
+{% include "SSMAPIBundle::Help/Schema/workspace.html.twig" with {'model':model} %}
+{% endblock %}
+
+{% block eastPane %}
+{% include "SSMAPIBundle::Help/Schema/eastPane.html.twig" with {'model':model} %}
+{% endblock %}
+
+{% block southPane %}
+{% include "SSMAPIBundle::Help/Schema/southPane.html.twig" with {'model':model} %}
+{% endblock %}

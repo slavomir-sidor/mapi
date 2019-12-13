@@ -1,0 +1,22 @@
+{% extends 'SSMAPIBundle::Filesystem/toolbar.html.twig' %}
+
+{% block toolbarButtonSet %}
+
+	<h2>
+		{% trans %}Detail{% endtrans %}
+	</h2>
+
+	<a href="{{ path('mapi_filesystem_edit', {
+			'path': model.path
+		})}}">
+		{% trans %}Open{% endtrans %}
+	</a>
+
+	<a href="{{ path('mapi_filesystem_delete', {
+			'path': model.path
+		})}}">
+		{% trans %}Delete{% endtrans %}
+	</a>
+
+	{{ parent() }}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'SSMAPIBundle::workspace.html.twig' %}
+
+{% block toolbar %}
+	{% include "SSMAPIBundle::Console:run.toolbar.html.twig" %}
+{% endblock %}
+
+{% block workspace %}
+	<pre class="ui-layout-center">{{ output }}</pre>
+{% endblock %}

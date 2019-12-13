@@ -1,6 +1,6 @@
 {
-    "type": "symfony-bundle",
-    "name": "itc/mitc-bundle",
+    "type": "symfony-project",
+    "name": "ss/mapi",
     "license": "proprietary",
     "bin": ["bin/console"],
     "require": {
@@ -38,8 +38,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SK\\ITCBundle\\" : "src/SK/ITCBundle/",
-            "SS\\Bundle\\" : "src/SS/Bundle/",
+            "SS\\" : "src/SS/Bundle/",
             "SS\\App\\" : "src/SS/App/",
             "App\\Tests\\": "tests/"
         }

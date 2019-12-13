@@ -32,7 +32,6 @@
     },
     "autoload": {
         "psr-4": {
-            "SK\\ITCBundle\\" : "src/SS/ITCBundle/",
             "SS\\Bundle\\" : "src/SS/Bundle/",
             "SS\\App\\" : "src/SS/App"
         }

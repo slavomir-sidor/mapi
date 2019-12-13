@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container
+	xmlns="http://symfony.com/schema/dic/services"
+	xmlns:twig="http://symfony.com/schema/dic/twig"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<twig:config
+		debug="%kernel.debug%"
+		strict-variables="%kernel.debug%">
+
+		<twig:path namespace="MAPIBundle">%kernel.project_dir%/src/SS/Bundle/MAPIBundle/Resources/views</twig:path>
+		<twig:path namespace="MonitorBundle">%kernel.project_dir%/src/SS/Bundle/MonitorBundle/Resources/views</twig:path>
+
+	</twig:config>
+
+</container>

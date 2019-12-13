@@ -33,14 +33,13 @@
     "autoload": {
         "psr-4": {
             "SS\\Bundle\\" : "src/SS/Bundle/",
-            "SS\\App\\" : "src/SS/App"
+            "SS\\Application\\" : "src/SS/Application"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "SS\\" : "src/SS/Bundle/",
-            "SS\\App\\" : "src/SS/App/",
-            "App\\Tests\\": "tests/"
+            "SS\\App\\" : "src/SS/App/"
         }
     },
     "replace": {

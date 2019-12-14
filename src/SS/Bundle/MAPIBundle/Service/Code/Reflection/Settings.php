@@ -48,6 +48,12 @@ class Settings
 
 	/**
 	 *
+	 * @var boolean
+	 */
+	protected $parameterDepraceted;
+
+	/**
+	 *
 	 * @var string
 	 */
 	protected $accessibility;
@@ -81,6 +87,36 @@ class Settings
 	 * @var boolean
 	 */
 	protected $isTrait;
+
+	/**
+	 *
+	 * @var boolean
+	 */
+	protected $isTraitMethod;
+
+	/**
+	 *
+	 * @var boolean
+	 */
+	protected $isTraitAttribute;
+
+	/**
+	 *
+	 * @var string
+	 */
+	protected $hasTrait;
+
+	/**
+	 *
+	 * @var string
+	 */
+	protected $hasTraitAttribute;
+
+	/**
+	 *
+	 * @var string
+	 */
+	protected $hasTraitProperty;
 
 	/**
 	 *
@@ -180,7 +216,8 @@ class Settings
 	 * @param
 	 *        	$attributeName
 	 */
-	public function setAttributeName( $attributeName )
+	public function setAttributeName( 
+		$attributeName )
 	{
 		$this->attributeName = $attributeName;
 		return $this;
@@ -200,7 +237,8 @@ class Settings
 	 * @param
 	 *        	$ignoreDotFiles
 	 */
-	public function setIgnoreDotFiles( $ignoreDotFiles )
+	public function setIgnoreDotFiles( 
+		$ignoreDotFiles )
 	{
 		$this->ignoreDotFiles = $ignoreDotFiles;
 		return $this;
@@ -220,7 +258,8 @@ class Settings
 	 * @param
 	 *        	$operationName
 	 */
-	public function setOperationName( $operationName )
+	public function setOperationName( 
+		$operationName )
 	{
 		$this->operationName = $operationName;
 		return $this;
@@ -240,7 +279,8 @@ class Settings
 	 * @param
 	 *        	$parameterName
 	 */
-	public function setParameterName( $parameterName )
+	public function setParameterName( 
+		$parameterName )
 	{
 		$this->parameterName = $parameterName;
 		return $this;
@@ -260,7 +300,8 @@ class Settings
 	 * @param
 	 *        	$accessibility
 	 */
-	public function setAccessibility( $accessibility )
+	public function setAccessibility( 
+		$accessibility )
 	{
 		$this->accessibility = $accessibility;
 		return $this;
@@ -280,7 +321,8 @@ class Settings
 	 * @param
 	 *        	$parentClass
 	 */
-	public function setParentClass( $parentClass )
+	public function setParentClass( 
+		$parentClass )
 	{
 		$this->parentClass = $parentClass;
 		return $this;
@@ -300,7 +342,8 @@ class Settings
 	 * @param
 	 *        	$fileSuffix
 	 */
-	public function setFileSuffix( $fileSuffix )
+	public function setFileSuffix( 
+		$fileSuffix )
 	{
 		$this->fileSuffix = $fileSuffix;
 		return $this;
@@ -320,7 +363,8 @@ class Settings
 	 * @param
 	 *        	$followLinks
 	 */
-	public function setFollowLinks( $followLinks )
+	public function setFollowLinks( 
+		$followLinks )
 	{
 		$this->followLinks = $followLinks;
 		return $this;
@@ -340,7 +384,8 @@ class Settings
 	 * @param
 	 *        	$isInterface
 	 */
-	public function setIsInterface( $isInterface )
+	public function setIsInterface( 
+		$isInterface )
 	{
 		$this->isInterface = $isInterface;
 		return $this;
@@ -360,7 +405,8 @@ class Settings
 	 * @param
 	 *        	$isTrait
 	 */
-	public function setIsTrait( $isTrait )
+	public function setIsTrait( 
+		$isTrait )
 	{
 		$this->isTrait = $isTrait;
 		return $this;
@@ -380,7 +426,8 @@ class Settings
 	 * @param
 	 *        	$isFinal
 	 */
-	public function setIsFinal( $isFinal )
+	public function setIsFinal( 
+		$isFinal )
 	{
 		$this->isFinal = $isFinal;
 		return $this;
@@ -400,7 +447,8 @@ class Settings
 	 * @param
 	 *        	$isAbstractClass
 	 */
-	public function setIsAbstractClass( $isAbstractClass )
+	public function setIsAbstractClass( 
+		$isAbstractClass )
 	{
 		$this->isAbstractClass = $isAbstractClass;
 		return $this;
@@ -420,7 +468,8 @@ class Settings
 	 * @param
 	 *        	$isAbstractOperation
 	 */
-	public function setIsAbstractOperation( $isAbstractOperation )
+	public function setIsAbstractOperation( 
+		$isAbstractOperation )
 	{
 		$this->isAbstractOperation = $isAbstractOperation;
 		return $this;
@@ -440,7 +489,8 @@ class Settings
 	 * @param
 	 *        	$isPrivate
 	 */
-	public function setIsPrivate( $isPrivate )
+	public function setIsPrivate( 
+		$isPrivate )
 	{
 		$this->isPrivate = $isPrivate;
 		return $this;
@@ -460,7 +510,8 @@ class Settings
 	 * @param
 	 *        	$isProtected
 	 */
-	public function setIsProtected( $isProtected )
+	public function setIsProtected( 
+		$isProtected )
 	{
 		$this->isProtected = $isProtected;
 		return $this;
@@ -480,7 +531,8 @@ class Settings
 	 * @param
 	 *        	$isPublic
 	 */
-	public function setIsPublic( $isPublic )
+	public function setIsPublic( 
+		$isPublic )
 	{
 		$this->isPublic = $isPublic;
 		return $this;
@@ -500,7 +552,8 @@ class Settings
 	 * @param
 	 *        	$isStatic
 	 */
-	public function setIsStatic( $isStatic )
+	public function setIsStatic( 
+		$isStatic )
 	{
 		$this->isStatic = $isStatic;
 		return $this;
@@ -519,7 +572,8 @@ class Settings
 	 *
 	 * @param array $implementsInterface
 	 */
-	public function setImplementsInterface( array $implementsInterface )
+	public function setImplementsInterface( 
+		array $implementsInterface )
 	{
 		$this->implementsInterface = $implementsInterface;
 		return $this;
@@ -538,7 +592,8 @@ class Settings
 	 *
 	 * @param array $exclude
 	 */
-	public function setExclude( array $exclude )
+	public function setExclude( 
+		array $exclude )
 	{
 		$this->exclude = $exclude;
 		return $this;
@@ -557,7 +612,8 @@ class Settings
 	 *
 	 * @param array $src
 	 */
-	public function setSrc( array $src )
+	public function setSrc( 
+		array $src )
 	{
 		$this->src = $src;
 		return $this;
@@ -577,7 +633,8 @@ class Settings
 	 * @param
 	 *        	$className
 	 */
-	public function setClassName( $className )
+	public function setClassName( 
+		$className )
 	{
 		$this->className = $className;
 		return $this;
@@ -596,7 +653,8 @@ class Settings
 	 *
 	 * @param boolean $parameterRequired
 	 */
-	public function setParameterRequired( $parameterRequired )
+	public function setParameterRequired( 
+		$parameterRequired )
 	{
 		$this->parameterRequired = $parameterRequired;
 		return $this;
@@ -615,10 +673,10 @@ class Settings
 	 *
 	 * @param string $date
 	 */
-	public function setDate( $date )
+	public function setDate( 
+		$date )
 	{
 		$this->date = $date;
 		return $this;
 	}
-
 }

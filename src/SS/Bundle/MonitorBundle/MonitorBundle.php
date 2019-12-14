@@ -1,10 +1,10 @@
 <?php
 /**
- * SK ITC Monitor Bundle
+ * SK Bundle Monitor
  *
  * @author Slavomir <slavomir.sidor@gmail.com>
  */
-namespace SS\MonitorBundle;
+namespace SS\Bundle\MonitorBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

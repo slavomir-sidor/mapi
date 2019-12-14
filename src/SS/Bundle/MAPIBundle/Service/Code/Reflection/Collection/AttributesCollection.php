@@ -23,7 +23,8 @@ class AttributesCollection extends Collection
 		'Class',
 		'Attribute',
 		'Type',
-		'Default'
+		'Default',
+		'DocBlock'
 	);
 
 	/**
@@ -45,6 +46,7 @@ class AttributesCollection extends Collection
 			$row['Attribute'] = $reflection->getName();
 			$row['Type'] = self::getAttributeType( $reflection );
 			$row['Default'] = self::getAttributeDefault($reflection);
+			$row['DocBlock'] = $reflection->getDocComment();
 
 			$rows[] = $row;
 		}

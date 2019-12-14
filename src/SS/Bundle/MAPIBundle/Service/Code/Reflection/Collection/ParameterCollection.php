@@ -22,7 +22,8 @@ class ParameterCollection extends Collection
 		'Operation'=>'Operation',
 		'Parameter'=>'Parameter',
 		'Type'=>'Type',
-		'Default'=>'Default'
+		'Default'=>'Default',
+		'DocBlock'=>'DocBlock'
 	);
 
 	/**
@@ -49,6 +50,7 @@ class ParameterCollection extends Collection
 				//$row[ 'Default' ] = is_array( $reflection->getDefaultValue() ) ? 'array' : $reflection->getDefaultValue();
 			}
 			$row[ 'Default' ]="";
+			$row[ 'DocBlock' ]=$reflection->getDocComment();
 
 			$rows[] = $row;
 		}

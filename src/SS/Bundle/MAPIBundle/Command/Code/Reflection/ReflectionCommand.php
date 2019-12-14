@@ -43,7 +43,11 @@ class ReflectionCommand extends TableCommand
 	 * @param Table $table
 	 * @param Reflection $reflection
 	 */
-	public function __construct( $name, $description, LoggerInterface $logger, Table $table,
+	public function __construct( 
+		$name,
+		$description,
+		LoggerInterface $logger,
+		Table $table,
 		Reflection $reflection )
 	{
 		parent::__construct( $name, $description, $logger, $table );
@@ -68,20 +72,21 @@ class ReflectionCommand extends TableCommand
 			"Files filter suffixes for given src, default all and not dot files.", "*.php" );
 		$this->addOption( "ignoreDotFiles", "df", InputOption::VALUE_OPTIONAL,
 			"Files filter ignore DOT files.", true );
-		$this->addOption( "followLinks", "fl", InputOption::VALUE_OPTIONAL,
-			"Files filter follows links.", false );
-		$this->addOption( "exclude", "ed",
-			InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
+		$this->addOption( "followLinks", "fl", InputOption::VALUE_OPTIONAL, "Files filter follows links.",
+			false );
+		$this->addOption( "exclude", "ed", InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
 			"Files filter excludes directory(ies) from given source" );
 		$this->addOption( "--date", "dt", InputOption::VALUE_OPTIONAL,
 			"The date must be something that strtotime() is able to parse: 'since yesterday', 'until 2 days ago', '> now - 2 hours', '>= 2005-10-15'" );
 
 		/* Class Filters */
 		$this->addOption( "className", "cn", InputOption::VALUE_OPTIONAL,
-			"Classes filter name, e.g. '^myPrefix|mySuffix$', regular expression allowed.",
-			NULL );
-		$this->addOption( "parentClass", "pc",
-			InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
+			"Classes filter name, e.g. '^myPrefix|mySuffix$', regular expression allowed.", NULL );
+
+		$this->addOption( "hasParentClass", "hpc", InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
+			"Classes that has parent class" );
+
+		$this->addOption( "parentClass", "pc", InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
 			"Classes filter parent Class Name, e.g 'My\Class'" );
 		$this->addOption( "isInterface", "ii", InputOption::VALUE_REQUIRED,
 			"Classes filter reflects interfaces objects only, (1|0)." );
@@ -98,30 +103,45 @@ class ReflectionCommand extends TableCommand
 		/* Attribute Filters */
 		$this->addOption( "attributeName", "an", InputOption::VALUE_OPTIONAL,
 			"Attributes filter name, e.g. '^myPrefix|mySuffix$', regular expression allowed." );
+		$this->addOption( "isTraitAttribute", "ita", InputOption::VALUE_REQUIRED,
+			"Attributes filter reflect trait attributes only, possible values are (1|0)." );
 
 		/* Operation Filters */
 		$this->addOption( "operationName", "on", InputOption::VALUE_OPTIONAL,
-			"Operations filter name, e.g. '^myPrefix|mySuffix$', regular expression allowed.",
-			NULL );
+			"Operations filter name, e.g. '^myPrefix|mySuffix$', regular expression allowed.", NULL );
 		$this->addOption( "isAbstractOperation", "ia", InputOption::VALUE_REQUIRED,
 			"Operations filter reflect abstract Operation Only, possible values are (1|0)." );
+		$this->addOption( "isTraitOperation", "ito", InputOption::VALUE_REQUIRED,
+			"Operations filter reflect trait operation only, possible values are (1|0)." );
 
 		/* Parameter Filters */
 		$this->addOption( "parameterName", "pn", InputOption::VALUE_OPTIONAL,
-			"Parameters filter parameter name, e.g. '^myPrefix|mySuffix$', regular expression allowed.",
-			NULL );
+			"Parameters filter parameter name, e.g. '^myPrefix|mySuffix$', regular expression allowed.", NULL );
 		$this->addOption( "parameterRequired", "pr", InputOption::VALUE_OPTIONAL,
 			"Parameters filter parameter is required or optional, .", NULL );
+		$this->addOption( "parameterDepraceted", "pd", InputOption::VALUE_OPTIONAL,
+			"Parameters filter parameter is depricated, .", NULL );
 
 		/* Attributes and Operations Filters */
 		$this->addOption( "isPrivate", "ip", InputOption::VALUE_REQUIRED,
 			"Attributes and Operations filter reflects private only or exclude it, (1|0)." );
-		$this->addOption( "isProtected", "id", InputOption::VALUE_REQUIRED,
+		$this->addOption( "isProtected", "ipr", InputOption::VALUE_REQUIRED,
 			"Attributes and Operations filter reflects protected only or exclude it, (1|0)." );
 		$this->addOption( "isPublic", "ic", InputOption::VALUE_REQUIRED,
 			"Attributes and Operations filter reflects public only or exclude it, (1|0)." );
 		$this->addOption( "isStatic", "is", InputOption::VALUE_REQUIRED,
 			"Attributes and Operations filter reflects static only or exclude it, (1|0)." );
+		$this->addOption( "isDepricated", "id", InputOption::VALUE_REQUIRED,
+			"Attributes and Operations filter reflects depricated, (1|0)." );
+
+		/* Trait Filters */
+
+		$this->addOption( "hasTrait", "ht", InputOption::VALUE_REQUIRED,
+			"Trait filter reflect only traited classes, possible values are (1|0)." );
+		$this->addOption( "hasTraitAttribute", "hta", InputOption::VALUE_REQUIRED,
+			"Trait filter reflect only classes with trait attribute, possible values are (1|0)." );
+		$this->addOption( "hasTraitProperty", "htp", InputOption::VALUE_REQUIRED,
+			"Trait filter reflect only classes with trait property, possible values are (1|0)." );
 
 		$this->addArgument( 'src', InputArgument::IS_ARRAY, 'PHP Source directory',
 			array("src/","app/","tests/"
@@ -129,11 +149,13 @@ class ReflectionCommand extends TableCommand
 	}
 
 	/**
-	 * 
-	 * {@inheritDoc}
+	 *
+	 * {@inheritdoc}
 	 * @see \SS\Bundle\MAPIBundle\Command\TableCommand::execute()
 	 */
-	public function execute( InputInterface $input, OutputInterface $output )
+	public function execute( 
+		InputInterface $input,
+		OutputInterface $output )
 	{
 		$src = $input->getArgument( "src" );
 		$canContinue = false;
@@ -148,8 +170,7 @@ class ReflectionCommand extends TableCommand
 
 		if( ! $canContinue )
 		{
-			$this->writeInfo( 
-				sprintf( "Sources '%s' doesn't exists.", implode( "', '", $src ) ), null,
+			$this->writeInfo( sprintf( "Sources '%s' doesn't exists.", implode( "', '", $src ) ), null,
 				$output );
 
 			return 0;
@@ -189,7 +210,8 @@ class ReflectionCommand extends TableCommand
 	 *
 	 * @param Reflection $reflection
 	 */
-	protected function setReflection( Reflection $reflection )
+	protected function setReflection( 
+		Reflection $reflection )
 	{
 		$this->reflection = $reflection;
 		return $this;
@@ -243,7 +265,8 @@ class ReflectionCommand extends TableCommand
 	 *
 	 * @param Settings $reflectionSettings
 	 */
-	protected function setReflectionSettings( Settings $reflectionSettings )
+	protected function setReflectionSettings( 
+		Settings $reflectionSettings )
 	{
 		$this->reflectionSettings = $reflectionSettings;
 		return $this;

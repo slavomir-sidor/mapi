@@ -80,6 +80,10 @@
 		{
 			"type" : "vcs",
 			"url" : "git@github.com:slavomirsidorhuljak/raml-php-parser.git"
+		},
+		{
+			"type" : "vcs",
+			"url" : "git@github.com:slavomirsidorhuljak/PHP-Token-Reflection.git"
 		}
 	],
 	"minimum-stability" : "dev"

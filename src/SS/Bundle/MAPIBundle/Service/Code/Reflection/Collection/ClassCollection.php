@@ -18,12 +18,13 @@ class ClassCollection extends Collection
 	 * @var array
 	 */
 	protected $columns = array(
-	 	'object'=>'PHP Object',
-		'final'=>'Final',
-		'abstract'=>'Abstract',
-		'name'=>'Namespace Name',
-		'parent'=>'Parent',
-		'interface'=>'Implements Interfaces'
+	 	'Class'=>'PHP Class',
+		'Final'=>'Final',
+		'Abstract'=>'Abstract',
+		'Name'=>'Namespace Name',
+		'Parent'=>'Parent',
+		'Interface'=>'Implements Interfaces',
+		'DocBlock'=>'Dock Block'
 	);
 
 	/**
@@ -48,12 +49,13 @@ class ClassCollection extends Collection
 		{
 			$row = [];
 
-			$row['object'] = self::getObjectType( $reflection );
-			$row['final'] = self::getFinal( $reflection );
-			$row['abstract'] = self::getAbstract( $reflection );
-			$row['name'] = $reflection->getName();
-			$row['parent'] = self::getParents( $reflection );
-			$row['interface'] = self::getInterfaces( $reflection );
+			$row['Class'] = self::getObjectType( $reflection );
+			$row['Final'] = self::getFinal( $reflection );
+			$row['Abstract'] = self::getAbstract( $reflection );
+			$row['Name'] = $reflection->getName();
+			$row['Parent'] = self::getParents( $reflection );
+			$row['Interface'] = self::getInterfaces( $reflection );
+			$row['DocBlock'] = $reflection->getDocComment();
 
 			$rows[] = $row;
 		}

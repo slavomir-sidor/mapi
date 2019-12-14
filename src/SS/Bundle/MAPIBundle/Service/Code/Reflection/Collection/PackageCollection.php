@@ -17,8 +17,7 @@ class PackageCollection extends Collection
 	 *
 	 * @var array $columns
 	 */
-	protected $columns = array(
-		'Namespace'
+	protected $columns = array('Namespace','DocBlock'
 	);
 
 	/**
@@ -34,6 +33,7 @@ class PackageCollection extends Collection
 		{
 			$row = [];
 			$row['Namespace'] = $package->getName();
+			$row['DocBlock'] = "Package ".implode(" ", explode("\\", $package->getName()));
 			$rows[] = $row;
 		}
 

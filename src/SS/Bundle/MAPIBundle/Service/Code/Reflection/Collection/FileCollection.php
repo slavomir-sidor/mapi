@@ -23,7 +23,9 @@ class FileCollection extends Collection
 		"Group",
 		"Permissions",
 		"Created",
-		"Modified"
+		"Modified",
+		"Namespaces",
+		"DocBlock"
 	);
 
 	/**
@@ -34,7 +36,7 @@ class FileCollection extends Collection
 		$rows = [];
 		$currentDir = getcwd() . DIRECTORY_SEPARATOR;
 
-		/* @var $reflection FileReflection  */
+		/* @var $reflection ReflectionFile  */
 		foreach( $this->getIterator() as $reflection )
 		{
 			$row = [];
@@ -47,7 +49,9 @@ class FileCollection extends Collection
 				"Group" => $file->getGroup(),
 				"Permissions" => $file->getPerms(),
 				"Created" => date( "d.m.Y h:m:s", $file->getCTime() ),
-				"Modified" => date( "d.m.Y h:m:s", $file->getMTime() )
+				"Modified" => date( "d.m.Y h:m:s", $file->getMTime() ),
+				"Namespaces"=>"",
+				"DocBlock" => $reflection->getDocComment()
 			);
 
 			$rows[] = $row;

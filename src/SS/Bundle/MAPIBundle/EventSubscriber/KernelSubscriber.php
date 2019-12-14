@@ -9,6 +9,8 @@ class KernelSubscriber implements EventSubscriberInterface
 {
 
 	public static function getSubscribedEvents()
-	{}
+	{
+		
+	}
 }
 

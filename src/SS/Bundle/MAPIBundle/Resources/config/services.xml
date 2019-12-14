@@ -22,203 +22,203 @@
 		<parameter key="ss.mapibundle.code.reflection.class">SS\Bundle\MAPIBundle\Service\Code\Reflection</parameter>
 
 		<!-- PHPUnit -->
-		<parameter key="ss.mapibundle.command.code.generator.phpunit.functional.name">generator:phpunit:functional</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.phpunit.functional.name">ss:generator:phpunit:functional</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.functional.description">SS MAPIBundle PHPUnit Functional Case</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.functional.class">SS\Bundle\MAPIBundle\Command\Code\Generator\PHPUnit\Functional</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.phpunit.performance.name">generator:phpunit:performance</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.phpunit.performance.name">ss:generator:phpunit:performance</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.performance.description">SS MAPIBundle PHPUnit Performance Case</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.performance.class">SS\Bundle\MAPIBundle\Command\Code\Generator\PHPUnit\Performance</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.phpunit.config.name">generator:phpunit:config</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.phpunit.config.name">ss:generator:phpunit:config</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.config.description">SS MAPIBundle PHPUnit Config Case</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.config.class">SS\Bundle\MAPIBundle\Command\Code\Generator\PHPUnit\Config</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.phpunit.equal.name">generator:phpunit:equal</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.phpunit.equal.name">ss:generator:phpunit:equal</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.equal.description">SS MAPIBundle PHPUnit Equal Case</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.equal.class">SS\Bundle\MAPIBundle\Command\Code\Generator\PHPUnit\Equal</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.phpunit.run.name">generator:phpunit:run</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.phpunit.run.name">ss:generator:phpunit:run</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.run.description">SS MAPIBundle PHPUnit Run Case</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.phpunit.run.class">SS\Bundle\MAPIBundle\Command\Code\Generator\PHPUnit\Run</parameter>
 
 		<!-- DTD Schema -->
-		<parameter key="ss.mapibundle.command.code.generator.dtd.entity.name">generator:dtd:entity</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.dtd.entity.name">ss:generator:dtd:entity</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.entity.description">SS MAPIBundle DTD Entity Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.entity.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DTD\Entity</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.dtd.attribute_list.name">generator:dtd:attlist</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.dtd.attribute_list.name">ss:generator:dtd:attlist</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.attribute_list.description">SS MAPIBundle DTD Attribute List Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.attribute_list.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DTD\AttributeList</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.dtd.element.name">generator:dtd:element</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.dtd.element.name">ss:generator:dtd:element</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.element.description">SS MAPIBundle DTD Element Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.element.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DTD\Element</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.dtd.document.name">generator:dtd:document</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.dtd.document.name">ss:generator:dtd:document</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.document.description">SS MAPIBundle DTD Document Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.document.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DTD\Document</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.dtd.route.name">generator:dtd:route</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.dtd.route.name">ss:generator:dtd:route</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.route.description">SS MAPIBundle DTD Route Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.route.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DTD\Route</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.dtd.security.name">generator:dtd:security</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.dtd.security.name">ss:generator:dtd:security</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.security.description">SS MAPIBundle DTD Security Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.dtd.security.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DTD\Security</parameter>
 
 		<!-- XSD Schema -->
-		<parameter key="ss.mapibundle.command.code.generator.xmlschema.orm.name">generator:xsd:orm</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.xmlschema.orm.name">ss:generator:xsd:orm</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.orm.description">SS MAPIBundle XSD ORM Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.orm.class">SS\Bundle\MAPIBundle\Command\Code\Generator\XMLSchema\ORM</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.xmlschema.form.name">generator:xsd:form</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.xmlschema.form.name">ss:generator:xsd:form</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.form.description">SS MAPIBundle XSD Form Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.form.class">SS\Bundle\MAPIBundle\Command\Code\Generator\XMLSchema\Form</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.xmlschema.view.name">generator:xsd:view</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.xmlschema.view.name">ss:generator:xsd:view</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.view.description">SS MAPIBundle XSD View Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.view.class">SS\Bundle\MAPIBundle\Command\Code\Generator\XMLSchema\View</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.xmlschema.config.name">generator:xsd:config</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.xmlschema.config.name">ss:generator:xsd:config</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.config.description">SS MAPIBundle XSD Config Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.config.class">SS\Bundle\MAPIBundle\Command\Code\Generator\XMLSchema\Config</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.xmlschema.route.name">generator:xsd:route</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.xmlschema.route.name">ss:generator:xsd:route</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.route.description">SS MAPIBundle XSD Route Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.route.class">SS\Bundle\MAPIBundle\Command\Code\Generator\XMLSchema\Route</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.xmlschema.security.name">generator:xsd:security</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.xmlschema.security.name">ss:generator:xsd:security</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.security.description">SS MAPIBundle XSD Security Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmlschema.security.class">SS\Bundle\MAPIBundle\Command\Code\Generator\XMLSchema\Security</parameter>
 
 		<!-- UML XMI Export -->
-		<parameter key="ss.mapibundle.command.code.generator.xmi.export.name">xmi:export</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.xmi.export.name">ss:xmi:export</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmi.export.description">SS MAPIBundle XMI Export Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.xmi.export.class">SS\Bundle\MAPIBundle\Command\Code\Generator\XMI\Export</parameter>
 
 		<!-- WS -->
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.bundle.name">generator:wsdl:bundle</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.bundle.name">ss:generator:wsdl:bundle</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.bundle.description">SS MAPIBundle WSDL Bundle Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.bundle.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Bundle</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.controller.name">generator:wsdl:controller</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.controller.name">ss:generator:wsdl:controller</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.controller.description">SS MAPIBundle WSDL Controller Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.controller.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Controller</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.orm.name">generator:wsdl:orm</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.orm.name">ss:generator:wsdl:orm</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.orm.description">SS MAPIBundle WSDL ORM Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.orm.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\ORM</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.form.name">generator:wsdl:form</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.form.name">ss:generator:wsdl:form</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.form.description">SS MAPIBundle WSDL Form Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.form.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Form</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.client.name">generator:wsdl:client</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.client.name">ss:generator:wsdl:client</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.client.description">SS MAPIBundle WSDL Client Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.client.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Client</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.server.name">generator:wsdl:server</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.server.name">ss:generator:wsdl:server</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.server.description">SS MAPIBundle WSDL Server Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.server.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Server</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.routing.name">generator:wsdl:route</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.routing.name">ss:generator:wsdl:route</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.routing.description">SS MAPIBundle WSDL Routes Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.routing.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Route</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.config.name">generator:wsdl:config</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.config.name">ss:generator:wsdl:config</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.config.description">SS MAPIBundle WSDL Conifg Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.config.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Config</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.view.name">generator:wsdl:view</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.view.name">ss:generator:wsdl:view</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.view.description">SS MAPIBundle WSDL Views Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.view.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\View</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.route.name">generator:wsdl:route</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.route.name">ss:generator:wsdl:route</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.route.description">SS MAPIBundle WSDL Route Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.route.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Route</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.security.name">generator:wsdl:security</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.security.name">ss:generator:wsdl:security</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.security.description">SS MAPIBundle WSDL Security Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.security.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Security</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.wsdl.parameter.name">generator:wsdl:parameter</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.wsdl.parameter.name">ss:generator:wsdl:parameter</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.parameter.description">SS MAPIBundle WSDL Parameter Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.wsdl.parameter.class">SS\Bundle\MAPIBundle\Command\Code\Generator\WSDL\Parameter</parameter>
 
 
 		<!-- DocBlock -->
-		<parameter key="ss.mapibundle.command.code.generator.docblock.file.name">doc:file</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.docblock.file.name">ss:doc:file</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.file.description">SS MAPIBundle Doc Block File Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.file.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DocBlock\FileCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.docblock.package.name">doc:package</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.docblock.package.name">ss:doc:package</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.package.description">SS MAPIBundle Doc Block Package Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.package.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DocBlock\PackageCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.docblock.class.name">doc:class</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.docblock.class.name">ss:doc:class</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.class.description">SS MAPIBundle Doc Block Class Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.class.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DocBlock\ClassCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.docblock.attribute.name">doc:attribute</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.docblock.attribute.name">ss:doc:attribute</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.attribute.description">SS MAPIBundle Doc Block Class Attribute Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.attribute.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DocBlock\AttributeCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.docblock.operation.name">doc:operations</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.docblock.operation.name">ss:doc:operations</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.operation.description">SS MAPIBundle Doc Block Class Operation Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.operation.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DocBlock\OperationCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.docblock.parameter.name">doc:parameter</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.docblock.parameter.name">ss:doc:parameter</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.parameter.description">SS MAPIBundle Doc Block Class Operation Parameter Generator</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.docblock.parameter.class">SS\Bundle\MAPIBundle\Command\Code\Generator\DocBlock\ParameterCommand</parameter>
 
 		<!-- Code Reflection -->
-		<parameter key="ss.mapibundle.command.code.reflection.file.name">uml:file</parameter>
+		<parameter key="ss.mapibundle.command.code.reflection.file.name">ss:uml:file</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.file.description">SS MAPIBundle UML Classes Files</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.file.class">SS\Bundle\MAPIBundle\Command\Code\Reflection\FileCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.reflection.package.name">uml:package</parameter>
+		<parameter key="ss.mapibundle.command.code.reflection.package.name">ss:uml:package</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.package.description">SS MAPIBundle UML Classes Namespaces</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.package.class">SS\Bundle\MAPIBundle\Command\Code\Reflection\PackageCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.reflection.class.name">uml:class</parameter>
+		<parameter key="ss.mapibundle.command.code.reflection.class.name">ss:uml:class</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.class.description">SS MAPIBundle UML Classes</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.class.class">SS\Bundle\MAPIBundle\Command\Code\Reflection\ClassCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.reflection.attribute.name">uml:attribute</parameter>
+		<parameter key="ss.mapibundle.command.code.reflection.attribute.name">ss:uml:attribute</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.attribute.description">SS MAPIBundle UML Classes Attributes</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.attribute.class">SS\Bundle\MAPIBundle\Command\Code\Reflection\AttributeCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.reflection.operation.name">uml:operation</parameter>
+		<parameter key="ss.mapibundle.command.code.reflection.operation.name">ss:uml:operation</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.operation.description">SS MAPIBundle UML Classes Operations</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.operation.class">SS\Bundle\MAPIBundle\Command\Code\Reflection\OperationCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.reflection.parameter.name">uml:parameter</parameter>
+		<parameter key="ss.mapibundle.command.code.reflection.parameter.name">ss:uml:parameter</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.parameter.description">SS MAPIBundle UML Classes Parameters</parameter>
 		<parameter key="ss.mapibundle.command.code.reflection.parameter.class">SS\Bundle\MAPIBundle\Command\Code\Reflection\ParameterCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.mylyn.report.name">mylyn:report</parameter>
+		<parameter key="ss.mapibundle.command.mylyn.report.name">ss:mylyn:report</parameter>
 		<parameter key="ss.mapibundle.command.mylyn.report.description">SS MAPIBundle Mylyn Report Repository</parameter>
 		<parameter key="ss.mapibundle.command.mylyn.report.class">SS\Bundle\MAPIBundle\Command\Mylyn\ReportCommand</parameter>
 
 		<!-- REST -->
-		<parameter key="ss.mapibundle.command.code.generator.rest.command.name">rest:command</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.rest.command.name">ss:rest:command</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.command.description">SS MAPIBundle REST Generator Command</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.command.class">SS\Bundle\MAPIBundle\Command\Code\Generator\REST\CommandCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.rest.controller.name">rest:controller</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.rest.controller.name">ss:rest:controller</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.controller.description">SS MAPIBundle REST Generator Controller</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.controller.class">SS\Bundle\MAPIBundle\Command\Code\Generator\REST\ControllerCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.rest.entity.name">rest:entity</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.rest.entity.name">ss:rest:entity</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.entity.description">SS MAPIBundle REST Generator Entity</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.entity.class">SS\Bundle\MAPIBundle\Command\Code\Generator\REST\EntityCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.rest.form.name">rest:form</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.rest.form.name">ss:rest:form</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.form.description">SS MAPIBundle REST Generator Form</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.form.class">SS\Bundle\MAPIBundle\Command\Code\Generator\REST\FormCommand</parameter>
 
-		<parameter key="ss.mapibundle.command.code.generator.rest.service.name">rest:service</parameter>
+		<parameter key="ss.mapibundle.command.code.generator.rest.service.name">ss:rest:service</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.service.description">SS MAPIBundle REST Generator Service</parameter>
 		<parameter key="ss.mapibundle.command.code.generator.rest.service.class">SS\Bundle\MAPIBundle\Command\Code\Generator\REST\ServiceCommand</parameter>
 
@@ -285,21 +285,21 @@
 		<parameter key="ss.mapibundle.google.spreadsheet.factory.class">Google\Spreadsheet\ServiceRequestFactory</parameter>
 		<parameter key="ss.mapibundle.google.api.client.class">Google_Client</parameter>
 
-		<parameter key="ss.mapibundle.command.google.translator.name">google:trans</parameter>
+		<parameter key="ss.mapibundle.command.google.translator.name">ss:google:trans</parameter>
 		<parameter key="ss.mapibundle.command.google.translator.description">SS MAPIBundle Google Trans</parameter>
 		<parameter key="ss.mapibundle.command.google.translator.class">SS\Bundle\MAPIBundle\Command\Google\Translator</parameter>
 
-		<parameter key="ss.mapibundle.command.google.drive.name">google:drive</parameter>
+		<parameter key="ss.mapibundle.command.google.drive.name">ss:google:drive</parameter>
 		<parameter key="ss.mapibundle.command.google.drive.description">SS MAPIBundle Google Drive</parameter>
 		<parameter key="ss.mapibundle.command.google.drive.class">SS\Bundle\MAPIBundle\Command\Google\Drive</parameter>
 
-		<parameter key="ss.mapibundle.command.google.spreadsheet.name">google:spreadsheet</parameter>
+		<parameter key="ss.mapibundle.command.google.spreadsheet.name">ss:google:spreadsheet</parameter>
 		<parameter key="ss.mapibundle.command.google.spreadsheet.description">SS MAPIBundle Google Spreadsheet</parameter>
 		<parameter key="ss.mapibundle.command.google.spreadsheet.class">SS\Bundle\MAPIBundle\Command\Google\Spreadsheet</parameter>
 
 		<parameter key="ss.mapibundle.command.google.spreadsheet.class">SS\Bundle\MAPIBundle\Command\Google\Spreadsheet</parameter>
 
-		<parameter key="google.application.name">SS MAPIBundle</parameter>
+		<parameter key="google.application.name">ss:SS MAPIBundle</parameter>
 		<parameter key="google.application.configFile">SS MAPIBundle</parameter>
 		<parameter key="google.application.offline">offline</parameter>
 
@@ -310,6 +310,11 @@
 	</parameters>
 
 	<services>
+
+		<defaults
+			autowire="true"
+			autoconfigure="true"
+			public="false" />
 
 		<!-- RAML -->
 
@@ -730,34 +735,10 @@
 			<tag name="console.command" />
 
 		</service>
-		<!--
-		<service
-			id="ss.mapibundle.command.mylyn.report.name"
-			class="%ss.mapibundle.command.mylyn.report.class%">
-
-			<argument type="string">%ss.mapibundle.command.mylyn.report.name%</argument>
-			<argument type="string">%ss.mapibundle.command.mylyn.report.description%</argument>
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.table" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.code.reflection" />
-
-			<argument
-				type="service"
-				id="jms_serializer" />
-
-			<tag name="console.command" />
-
-		</service>
-		-->
+		<!-- <service id="ss.mapibundle.command.mylyn.report.name" class="%ss.mapibundle.command.mylyn.report.class%"> <argument 
+			type="string">%ss.mapibundle.command.mylyn.report.name%</argument> <argument type="string">%ss.mapibundle.command.mylyn.report.description%</argument> 
+			<argument type="service" id="logger" /> <argument type="service" id="ss.mapibundle.table" /> <argument type="service" id="ss.mapibundle.code.reflection" 
+			/> <argument type="service" id="jms_serializer" /> <tag name="console.command" /> </service> -->
 		<!-- REST Commands -->
 		<service
 			id="ss.mapibundle.command.code.generator.rest.command"
@@ -903,9 +884,10 @@
 			class="%ss.mapibundle.google.spreadsheet.class%" />
 
 		<!-- Menu -->
-		<!-- <service id="ss.mapibundle.menu.builder" class="%ss.mapibundle.menu.builder.class%"> <argument type="service" id="knp_menu.factory" /> </service> 
-			<service id="ss.mapibundle.menu.itc" class="Knp\Menu\MenuItem" factory-service="ss.mapibundle.menu.builder" factory-method="createMenu" scope="request"> 
-			<argument type="service" id="request_stack" /> <argument>%ss.mapibundle.menu.builder.items%</argument> <tag name="knp_menu.menu" alias="main" /> </service> -->
+		<!-- <service id="ss.mapibundle.menu.builder" class="%ss.mapibundle.menu.builder.class%"> <argument type="service" id="knp_menu.factory" 
+			/> </service> <service id="ss.mapibundle.menu.itc" class="Knp\Menu\MenuItem" factory-service="ss.mapibundle.menu.builder" 
+			factory-method="createMenu" scope="request"> <argument type="service" id="request_stack" /> <argument>%ss.mapibundle.menu.builder.items%</argument> 
+			<tag name="knp_menu.menu" alias="main" /> </service> -->
 
 		<!-- PHPUnit -->
 		<service

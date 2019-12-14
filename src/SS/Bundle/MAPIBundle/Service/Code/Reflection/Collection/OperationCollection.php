@@ -6,6 +6,7 @@ use SS\Bundle\MAPIBundle\Service\Code\Collection;
 
 class OperationCollection extends Collection
 {
+
 	/**
 	 *
 	 * @var ReflectionMethod[]
@@ -16,14 +17,8 @@ class OperationCollection extends Collection
 	 *
 	 * @var array
 	 */
-	protected $columns = array(
-		'Class',
-		'Accessibility',
-		'Abstract',
-		'Static',
-		'Operation',
-		'Parameters',
-		'Returns'
+	protected $columns = array('Class','Accessibility','Abstract','Static','Operation','Parameters','Returns',
+		'DocBlock'
 	);
 
 	/**
@@ -44,8 +39,10 @@ class OperationCollection extends Collection
 			$row['Abstract'] = self::getAbstract( $reflection );
 			$row['Static'] = self::getStatic( $reflection );
 			$row['Operation'] = $reflection->getName();
-			$row['Parameters'] = self::getOperationParameters($reflection);
-			$row['Returns'] = self::getOperationReturns($reflection);
+			$row['DocBlock'] = $reflection->getPrettyName();
+			$row['Parameters'] = self::getOperationParameters( $reflection );
+			$row['Returns'] = self::getOperationReturns( $reflection );
+			$row['DocBlock'] = $reflection->getDocComment();
 
 			$rows[] = $row;
 		}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container
+	xmlns="http://symfony.com/schema/dic/services"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+	<parameters>
+
+		<!-- Framework -->
+		<parameter key="framework.http_method_override">true</parameter>
+		<parameter key="framework.default_locale">cs</parameter>
+		<parameter key="framework.secret">%kernel.secret%</parameter>
+		<parameter key="framework.trusted_proxies">192.0.0.1, 10.0.0.0/8</parameter>
+		<parameter key="framework.trusted_host">^localhost$</parameter>
+		<parameter key="framework.test">false</parameter>
+
+
+		<!-- Framework Translator -->
+		<parameter key="framework.translator.fallback">%framework.default_locale%</parameter>
+		<parameter key="framework.translator.locales">cs_CZ|en_US|fr_FR|de_DE|sk_SK|pl_PL|hu_HU</parameter>
+
+	</parameters>
+
+</container>

@@ -31,6 +31,8 @@ class MAPIExtension extends Extension
 			new FileLocator( __DIR__ . '/../Resources/config' ) );
 		
 		$loader->load( 'mapi.xml' );
+		$loader->load( 'menu.xml' );
+		$loader->load( 'services.xml' );
 
 		foreach( $configs as $key => $config )
 		{

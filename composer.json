@@ -19,7 +19,8 @@
         "symfony/monolog-bundle": "^3.5",
         "symfony/process": "5.0.*",
         "symfony/twig-bundle": "5.0.*",
-        "symfony/yaml": "5.0.*"
+        "symfony/yaml": "5.0.*",
+        "raml-org/raml-php-parser":"*"
     },
     "require-dev": {
         
@@ -38,8 +39,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SS\\" : "src/SS/Bundle/",
-            "SS\\App\\" : "src/SS/App/"
+            "SS\\Bundle\\" : "src/SS/Bundle/",
+            "SS\\Application\\" : "src/SS/Application/"
         }
     },
     "replace": {
@@ -75,6 +76,11 @@
 	"repositories" : [{
 			"type" : "vcs",
 			"url" : "git@github.com:slavomirsidorhuljak/mitc-bundle.git"
+		},
+		{
+			"type" : "vcs",
+			"url" : "git@github.com:slavomirsidorhuljak/raml-php-parser.git"
 		}
-	]
+	],
+	"minimum-stability" : "dev"
 }

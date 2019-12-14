@@ -7,16 +7,10 @@
         https://symfony.com/schema/dic/services/services-1.0.xsd
         http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
-	<parameters>
-		<parameter key="env(HTTP_METHOD_OVERRIDE)">true</parameter>
-	</parameters>
-
-
-	<framework:config
-		secret="%env(APP_SECRET)%"
-		http-methode-override="%env(bool:HTTP_METHOD_OVERRIDE)%">
+	<framework:config secret="%env(APP_SECRET)%">
 
 		<framework:session enabled="true" />
+		<framework:router utf8="true" />
 
 	</framework:config>
 

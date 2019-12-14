@@ -278,19 +278,6 @@
 		<parameter key="ss.mapibundle.code.generator.wsdl.parameter.class">SS\Bundle\MAPIBundle\Service\Code\Generator\WSDL\Parameter</parameter>
 
 
-		<!-- OS -->
-		<parameter key="ss.mapibundle.os.command.class">SS\Bundle\MAPIBundle\Service\OS\Command</parameter>
-		<parameter key="ss.mapibundle.command.os.shellcommand.class">SS\Bundle\MAPIBundle\Command\OS\ShellCommand</parameter>
-
-		<parameter key="ss.mapibundle.command.os.name.name">os:info</parameter>
-		<parameter key="ss.mapibundle.command.os.name.description">SS MAPIBundle OS Info</parameter>
-		<parameter key="ss.mapibundle.command.os.name.class">%ss.mapibundle.command.os.shellcommand.class%</parameter>
-
-		<parameter key="ss.mapibundle.command.os.release.name">os:release</parameter>
-		<parameter key="ss.mapibundle.command.os.release.description">SS MAPIBundle OS Release</parameter>
-		<parameter key="ss.mapibundle.command.os.release.class">%ss.mapibundle.command.os.shellcommand.class%</parameter>
-
-
 		<!-- Google -->
 		<parameter key="ss.mapibundle.google.drive.class">SS\Bundle\MAPIBundle\Service\Google\Drive</parameter>
 		<parameter key="ss.mapibundle.google.spreadsheet.class">SS\Bundle\MAPIBundle\Service\Google\Spreadsheet</parameter>
@@ -743,7 +730,7 @@
 			<tag name="console.command" />
 
 		</service>
-
+		<!--
 		<service
 			id="ss.mapibundle.command.mylyn.report.name"
 			class="%ss.mapibundle.command.mylyn.report.class%">
@@ -770,7 +757,7 @@
 			<tag name="console.command" />
 
 		</service>
-
+		-->
 		<!-- REST Commands -->
 		<service
 			id="ss.mapibundle.command.code.generator.rest.command"
@@ -1047,113 +1034,6 @@
 		<service
 			id="ss.mapibundle.code.generator.wsdl.security"
 			class="%ss.mapibundle.code.generator.wsdl.security.class%" />
-
-		<!-- OS -->
-		<service
-			id="ss.mapibundle.os.command.uname"
-			class="%ss.mapibundle.os.command.class%">
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.table" />
-
-			<argument type="string">uname</argument>
-
-			<argument type="collection">
-				<argument>-a</argument>
-			</argument>
-
-		</service>
-
-		<service
-			id="ss.mapibundle.os.command.lsb_release"
-			class="%ss.mapibundle.os.command.class%">
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.table" />
-
-			<argument type="string">lsb_release</argument>
-
-			<argument type="collection">
-				<argument>-a</argument>
-			</argument>
-
-		</service>
-
-		<service
-			id="ss.mapibundle.os.command"
-			class="%ss.mapibundle.os.command.class%">
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.table" />
-
-			<argument type="string">uname</argument>
-
-			<argument type="collection">
-				<argument>-a</argument>
-			</argument>
-
-		</service>
-
-		<service
-			id="ss.mapibundle.command.os.release"
-			class="%ss.mapibundle.command.os.shellcommand.class%">
-
-			<argument type="string">%ss.mapibundle.command.os.release.name%</argument>
-			<argument type="string">%ss.mapibundle.command.os.release.description%</argument>
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.table" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.os.command.lsb_release" />
-
-			<tag name="console.command" />
-
-		</service>
-
-		<service
-			id="ss.mapibundle.command.os.name"
-			class="%ss.mapibundle.command.os.shellcommand.class%">
-
-			<argument type="string">%ss.mapibundle.command.os.name.name%</argument>
-			<argument type="string">%ss.mapibundle.command.os.name.description%</argument>
-
-			<argument
-				type="service"
-				id="logger" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.table" />
-
-			<argument
-				type="service"
-				id="ss.mapibundle.os.command.uname" />
-
-			<tag name="console.command" />
-
-		</service>
 
 		<!-- <service -->
 		<!-- id="ss.mapibundle.command.code.generator.phpunit.functional" -->

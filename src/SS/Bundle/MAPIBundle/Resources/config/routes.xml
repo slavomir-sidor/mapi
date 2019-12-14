@@ -271,7 +271,7 @@
 
 	<route
 		id="mapi_ci"
-		path="">
+		path="/ci">
 
 		<default key="_locale">%framework.translator.fallback%</default>
 		<default key="_controller">SSMAPIBundle:CI:index</default>

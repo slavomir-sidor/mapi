@@ -87,7 +87,7 @@ class Table extends AbstractService
 	 */
 	public function write( $format = TXT::name, OutputInterface $output )
 	{
-		$name = 'SS\\MAPIBundle\\Service\\Table\\Adapter\\' . $format;
+		$name = 'SS\\Bundle\\MAPIBundle\\Service\\Table\\Adapter\\' . $format;
 		$adapter = new $name();
 		$adapter->write( $this, $output );
 	}

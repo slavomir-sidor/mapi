@@ -10,7 +10,6 @@
 		strict-variables="%kernel.debug%">
 
 		<twig:path namespace="MAPIBundle">%kernel.project_dir%/src/SS/Bundle/MAPIBundle/Resources/views</twig:path>
-		<twig:path namespace="MonitorBundle">%kernel.project_dir%/src/SS/Bundle/MonitorBundle/Resources/views</twig:path>
 
 	</twig:config>
 

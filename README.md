@@ -67,6 +67,12 @@ Code Manipulation
 
     From Internal UML Models gives ability to manipulate with given code.
     Features:
+       - code generating
+       - genrating codes bundles, applications from API specification, from UMLs 
+       - code refactoring, 
+           - old verions to new
+           - between frameworks 
+           - estimations
 
 **Formating**
 

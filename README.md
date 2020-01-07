@@ -73,6 +73,7 @@ Code Manipulation
            - old verions to new
            - between frameworks 
            - estimations
+       - php unit tests generator /nette, symfony/ equal tests, non equal tests, performance tests
 
 **Formating**
 

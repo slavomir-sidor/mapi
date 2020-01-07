@@ -1,4 +1,4 @@
-ITC Bundle - old ITC Bundle refactored to Symfony 5.
+MAPI Bundle - old ITC Bundle refactored to Symfony 5.
 ==========
 
     CODE Reflection,UML Modelingm & Manipulations Library with generators.
